@@ -49,6 +49,6 @@ export const TechStack = () => {
 
 const StyledTechStack = styled.section`
   background-color: #b8f8f2;
-  min-height: 100vh;
+  min-height: 50vh;
 `
 

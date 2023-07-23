@@ -10,7 +10,7 @@ export const Main = () => {
                 <div>
                     <span>Hi 👋,</span>
                     <Name>I am Ivan Dolgikh</Name>
-                    <MainTitle>A web developer. </MainTitle>
+                    <MainTitle>A web developer.</MainTitle>
                 </div>
                 <Photo src={photo} alt="Ivan Dolgikh"/>
             </FlexWrapper>
@@ -19,7 +19,7 @@ export const Main = () => {
 };
 
 const MainStyled = styled.div`
-  min-height: 100vh;
+  min-height: 50vh;
   background-color: #f3e5a7;
 `
 const MainTitle = styled.h1`
