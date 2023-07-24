@@ -2,6 +2,7 @@ import React from 'react';
 import photo from "../../../assets/img/photo.webp"
 import styled from "styled-components";
 import {FlexWrapper} from "../../../components/FlexWrapper";
+import {About} from "./about/About";
 
 export const Main = () => {
     return (
@@ -14,6 +15,10 @@ export const Main = () => {
                 </div>
                 <Photo src={photo} alt="Ivan Dolgikh"/>
             </FlexWrapper>
+                <About/>
+
+
+
         </MainStyled>
     );
 };
