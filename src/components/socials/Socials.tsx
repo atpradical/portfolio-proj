@@ -1,17 +1,38 @@
 import React from 'react';
 import styled from "styled-components";
+import {Icon} from "../icon/Icon";
 
-export const Socials = () => {
+export const SocialsIconList = () => {
     return (
-            <StyledSocials>
-                <li><a href="">GitHub</a></li>
-                <li><a href="">Twitter</a></li>
-                <li><a href="">LinkedIn</a></li>
-            </StyledSocials>
+        <StyledSocialsList>
+            <SocialsItem>
+                <SocialsLink>
+                    <Icon iconId={"github"} iconWidth={"30px"} iconHeight={"30px"} iconViewBox={"0 0 30px 30px"}/>
+                </SocialsLink>
+            </SocialsItem>
+            <SocialsItem>
+                <SocialsLink>
+                    <Icon iconId={"twitter"} iconWidth={"30px"} iconHeight={"30px"} iconViewBox={"0 0 30px 30px"}/>
+                </SocialsLink>
+            </SocialsItem>
+            <SocialsItem>
+                <SocialsLink>
+                    <Icon iconId={"linkedin"} iconWidth={"30px"} iconHeight={"30px"} iconViewBox={"0 0 30px 30px"}/>
+                </SocialsLink>
+            </SocialsItem>
+        </StyledSocialsList>
     );
 };
 
-const StyledSocials = styled.ul`
-      display: flex;
-      gap: 30px;
+const StyledSocialsList = styled.ul`
+  display: flex;
+  gap: 35px;
+`
+
+const SocialsItem = styled.li`
+
+`
+
+const SocialsLink = styled.a`
+
 `
