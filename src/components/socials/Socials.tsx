@@ -7,17 +7,20 @@ export const SocialsIconList = () => {
         <StyledSocialsList>
             <SocialsItem>
                 <SocialsLink>
-                    <Icon iconId={"github"} iconWidth={"30px"} iconHeight={"30px"} iconViewBox={"0 0 30px 30px"}/>
+                    <Icon iconId={"github"}
+                          iconWidth={"30px"} iconHeight={"30px"} iconViewBox={"0 0 30px 30px"}/>
                 </SocialsLink>
             </SocialsItem>
             <SocialsItem>
                 <SocialsLink>
-                    <Icon iconId={"twitter"} iconWidth={"30px"} iconHeight={"30px"} iconViewBox={"0 0 30px 30px"}/>
+                    <Icon iconId={"twitter"}
+                          iconWidth={"30px"} iconHeight={"30px"} iconViewBox={"0 0 30px 30px"}/>
                 </SocialsLink>
             </SocialsItem>
             <SocialsItem>
                 <SocialsLink>
-                    <Icon iconId={"linkedin"} iconWidth={"30px"} iconHeight={"30px"} iconViewBox={"0 0 30px 30px"}/>
+                    <Icon iconId={"linkedin"}
+                          iconWidth={"30px"} iconHeight={"30px"} iconViewBox={"0 0 30px 30px"}/>
                 </SocialsLink>
             </SocialsItem>
         </StyledSocialsList>
