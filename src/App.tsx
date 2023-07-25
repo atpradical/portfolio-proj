@@ -1,6 +1,7 @@
 import './App.css';
 import {Header} from "./layout/header/Header";
 import {Main} from "./layout/sections/main/Main";
+import {CvBlock} from "./layout/sections/cvblock/CvBlock";
 import {TechStack} from "./layout/sections/techstack/TechStack";
 import {Projects} from "./layout/sections/projects/Projects";
 import {Testimony} from "./layout/sections/testimony/Testimony";
@@ -14,6 +15,7 @@ function App() {
         <div className="App">
             <Header/>
             <Main/>
+            <CvBlock/>
             <TechStack/>
             <Projects/>
             <Testimony/>
