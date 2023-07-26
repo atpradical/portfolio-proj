@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
-import {SectionTitle} from "../../../../components/SectionTitle";
-import {Card} from "../../../../components/card/Card";
+import {SectionTitle} from "components/SectionTitle";
+import {Card} from "components/card/Card";
 
 export const Experience = () => {
     return (
@@ -27,5 +27,5 @@ export const Experience = () => {
 };
 
 const StyledExperience = styled.section`
-  width: 75%;
+  max-width: 710px;
 `

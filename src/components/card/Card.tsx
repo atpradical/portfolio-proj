@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {FC} from 'react';
 import styled from "styled-components";
 import {Company} from "./company/Company";
 import {Location} from "./location/Location";
@@ -6,25 +6,25 @@ import {Period} from "./period/Period";
 import {FlexWrapper} from "../FlexWrapper";
 
 type CardPropsType = {
-    title: string;
-    activity: string;
-    companyName: string;
-    companyLocation?: string;
-    period: string;
+    title: string
+    activity: string
+    companyName: string
+    companyLocation?: string
+    period: string
 }
 
-export const Card = (props: CardPropsType) => {
+export const Card: FC<CardPropsType> = ({title, companyName, companyLocation, period,activity}) => {
     return (
         <StyledCard>
             <FlexWrapper direction={"column"}>
                 <CardSection>
-                    <CardTitle>{props.title}</CardTitle>
-                    <Activity>{props.activity}</Activity>
+                    <CardTitle>{title}</CardTitle>
+                    <Activity>{activity}</Activity>
                 </CardSection>
                 <CardSection>
-                    <Company companyName={props.companyName}/>
-                    <Location companyLocation={props.companyLocation}/>
-                    <Period period={props.period}/>
+                    <Company companyName={companyName}/>
+                    <Location companyLocation={companyLocation}/>
+                    <Period period={period}/>
                 </CardSection>
             </FlexWrapper>
         </StyledCard>

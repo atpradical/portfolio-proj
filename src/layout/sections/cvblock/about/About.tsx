@@ -1,7 +1,7 @@
 import React from 'react';
-import {SectionTitle} from "../../../../components/SectionTitle";
+import {SectionTitle} from "components/SectionTitle";
 import styled from "styled-components";
-import {FlexWrapper} from "../../../../components/FlexWrapper";
+import {FlexWrapper} from "components/FlexWrapper";
 
 export const About = () => {
     return (
@@ -17,7 +17,7 @@ export const About = () => {
 };
 
 const StyledAbout = styled.section`
-  width: 75%;
+  max-width: 710px;
 `
 
 const Text = styled.p`

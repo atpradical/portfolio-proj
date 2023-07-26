@@ -1,7 +1,7 @@
 import React from 'react';
-import photo from "../../../assets/img/photo.webp"
+import photo from "assets/img/photo.webp"
 import styled from "styled-components";
-import {FlexWrapper} from "../../../components/FlexWrapper";
+import {FlexWrapper} from "components/FlexWrapper";
 
 export const Main = () => {
     return (
@@ -18,7 +18,7 @@ export const Main = () => {
     );
 };
 
-const MainStyled = styled.div`
+const MainStyled = styled.section`
   min-height: 50vh;
   background-color: #f3e5a7;
 `
