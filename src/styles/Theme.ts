@@ -7,6 +7,6 @@ export const theme = {
         titleFont: "#42446E",
         normalFont: "#666666",
         lightFont: "#A7A7A7",
-        cardTitleFont: "#000000";
+        cardTitleFont: "#000000",
     }
 }
