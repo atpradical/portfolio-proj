@@ -16,11 +16,11 @@ export const SectionTitle = styled.h2`
     content: "";
     display: inline-block;
     width: 155px;
-    height: 2px;
+    height: 1px;
     background-color: ${theme.colors.titleFont};
     
     position: absolute;
-    top: 80px;;
+    top: 50px;;
     left: 50%;
     transform: translateX(-50%);
   }

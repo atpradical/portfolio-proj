@@ -22,7 +22,6 @@ const StyledTabMenu = styled.nav`
   ul {
     display: flex;
     justify-content: center;
-    margin-bottom: 10px;
   }
 `
 const ListItem = styled.li`
@@ -39,7 +38,7 @@ const Link = styled.a`
   
   &:hover {
     &::after {
-      height: 3px;
+      height: 1px;
     }
   }
 
@@ -50,8 +49,8 @@ const Link = styled.a`
 
     position: absolute;
     bottom: 0;
-    left: -5px;
-    right: -5px;
+    left: 10px;
+    right: 10px;
   }
 `
 
