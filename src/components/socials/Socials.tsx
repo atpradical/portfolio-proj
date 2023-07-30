@@ -32,10 +32,6 @@ const StyledSocialsList = styled.ul`
   gap: 20px;
 `
 
-const SocialsItem = styled.li`
+const SocialsItem = styled.li``
 
-`
-
-const SocialsLink = styled.a`
-
-`
+const SocialsLink = styled.a``

@@ -63,6 +63,7 @@ const Name = styled.h2`
 
 const PhotoWrapper = styled.div`
   position: relative;
+  z-index: 0;
   
   &::before {
     content: "";
