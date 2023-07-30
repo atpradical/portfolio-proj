@@ -2,10 +2,11 @@
 import React from 'react';
 import styled from "styled-components";
 import {Logo} from "components/logo/Logo";
-import {Menu} from "components/menu/Menu";
 import {SocialsIconList} from "components/socials/Socials";
 import {Container} from "components/Container";
 import {FlexWrapper} from "components/FlexWrapper";
+import {theme} from "styles/Theme";
+import {HeaderMenu} from "layout/header/headerMenu/HeaderMenu";
 
 const items = ["Home", "About", "Tech Stack", "Projects", "Contact"];
 
@@ -15,7 +16,7 @@ export const Header = () => {
             <Container>
                 <FlexWrapper justify={"space-between"} align={"center"}>
                     <Logo/>
-                    <Menu menuItems={items}/>
+                    <HeaderMenu menuItems={items}/>
                     <SocialsIconList/>
                 </FlexWrapper>
             </Container>
@@ -24,5 +25,10 @@ export const Header = () => {
 };
 
 const StyledHeader = styled.header`
-  background-color: #c6f5b0;
+  background-color: ${theme.colors.primary};
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999;
 `
