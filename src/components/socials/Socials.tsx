@@ -29,7 +29,7 @@ export const SocialsIconList = () => {
 
 const StyledSocialsList = styled.ul`
   display: flex;
-  gap: 35px;
+  gap: 20px;
 `
 
 const SocialsItem = styled.li`

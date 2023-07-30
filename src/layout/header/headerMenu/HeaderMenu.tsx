@@ -21,13 +21,12 @@ export const HeaderMenu = (props: { menuItems: Array<string> }) => {
 const StyledMenu = styled.nav`
   ul {
     display: flex;
-    gap: 30px;
     justify-content: center;
   }
 `
 
 const ListItem = styled.li`
-
+  margin-right: 50px;
 `
 
 const Link = styled.a`

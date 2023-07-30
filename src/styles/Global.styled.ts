@@ -9,7 +9,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
   }
-  
+
   body {
     margin: 0;
     font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -17,21 +17,21 @@ export const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  
+
   a {
     text-decoration: none;
   }
-  
+
   ul {
     list-style: none;
   }
-  
+
   button {
     background-color: unset;
     border: unset;
   }
-  
-  section {
+
+  body > section {
     background-color: ${theme.colors.primary};
   }
 `
