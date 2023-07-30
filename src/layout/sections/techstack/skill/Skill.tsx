@@ -34,15 +34,9 @@ const StyledSkill = styled.div`
 
 const StyledSkillTitle = styled.h3`
   margin: 10px 0;
-  color: ${theme.colors.cardTitleFont};
   text-align: center;
-  font-size: 20px;
-  font-weight: 500;
 `
 
 const StyledSkillText = styled.p`
-  color: ${theme.colors.lightFont};
   text-align: start;
-  font-size: 15px;
-  font-weight: 300;
 `

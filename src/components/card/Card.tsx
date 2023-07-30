@@ -36,7 +36,7 @@ const StyledCard = styled.div`
   border: 1px solid darkred;
 `
 
-const CardSection = styled.section`
+const CardSection = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;

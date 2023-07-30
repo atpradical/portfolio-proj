@@ -16,7 +16,7 @@ export const About = () => {
     );
 };
 
-const StyledAbout = styled.section`
+const StyledAbout = styled.div`
   max-width: 710px;
 `
 

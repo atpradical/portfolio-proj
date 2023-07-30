@@ -15,6 +15,6 @@ export const Education = () => {
     );
 };
 
-const StyledEducation = styled.section`
+const StyledEducation = styled.div`
   max-width: 710px;
 `

@@ -16,10 +16,16 @@ export const GlobalStyle = createGlobalStyle`
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-style: normal;
   }
   
   a {
     text-decoration: none;
+    color: ${theme.colors.normalFont};
+    font-family: DM Sans;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 26px;
   }
 
   ul {
@@ -33,5 +39,19 @@ export const GlobalStyle = createGlobalStyle`
 
   section {
     background-color: ${theme.colors.primary};
+    margin: 100px 0;
+  }
+  
+  h3 {
+    color: ${theme.colors.cardTitleFont};
+    font-size: 20px;
+    font-weight: 500;
+  }
+  
+  p {
+    color: ${theme.colors.lightFont};
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 26px;
   }
 `

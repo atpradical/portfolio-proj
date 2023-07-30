@@ -26,6 +26,6 @@ export const Experience = () => {
     );
 };
 
-const StyledExperience = styled.section`
+const StyledExperience = styled.div`
   max-width: 710px;
 `
