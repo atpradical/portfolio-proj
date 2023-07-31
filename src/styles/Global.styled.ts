@@ -35,6 +35,9 @@ export const GlobalStyle = createGlobalStyle`
   button {
     background-color: unset;
     border: unset;
+    cursor: pointer;
+    color: ${theme.colors.titleFont};
+    border: 1px solid ${theme.colors.titleFont};
   }
 
   section {

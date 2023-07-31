@@ -1,12 +1,15 @@
 import React from 'react';
 import styled from "styled-components";
-import {SectionTitle} from "../../../components/SectionTitle";
-import {Button} from "../../../components/Button";
+import {SectionTitle} from "components/SectionTitle";
+import {SectionText} from "components/SectionText";
+import {Button} from "components/Button";
+
 
 export const Contacts = () => {
     return (
         <StyledContacts>
             <SectionTitle>Contacts</SectionTitle>
+            <SectionText>I'm available for freelance</SectionText>
             <StyledForm>
                 <Field placeholder={"Name"}/>
                 <Field placeholder={"subject"}/>
@@ -20,7 +23,6 @@ export const Contacts = () => {
 
 const StyledContacts = styled.section`
   min-height: 32vh;
-  background-color: #8ff3a6;
 `
 
 const StyledForm = styled.form`

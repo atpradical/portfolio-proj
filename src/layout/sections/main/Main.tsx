@@ -56,7 +56,7 @@ const Name = styled.h2`
   line-height: 70px;
   letter-spacing: -1px;
 
-  background-image: var(--gradient-heading, linear-gradient(90deg, #13B0F5 2.60%, #E70FAA 100%));
+  background-image: ${theme.colors.gradient90};
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 `
@@ -67,16 +67,16 @@ const PhotoWrapper = styled.div`
   
   &::before {
     content: "";
-    width: 375px;
-    height: 375px;
+    width: 370px;
+    height: 370px;
     background-color: green;
     border-radius: 50%;
-    background-image: var(--gradient-heading, linear-gradient(0deg, #13B0F5 2.60%, #E70FAA 100%));
+    background-image: ${theme.colors.gradient0};
     
     position: absolute;
     z-index: -1;
-    left: -12.5px;
-    top: -12.5px
+    left: -10.5px;
+    top: -10.5px;
   }
 `
 
