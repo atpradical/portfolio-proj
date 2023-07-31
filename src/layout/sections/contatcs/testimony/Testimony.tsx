@@ -21,6 +21,6 @@ const StyledTestimony = styled.section`
   margin: 0;
   
   ${SectionTitle} {
-    margin-bottom: 70px;
+    margin-bottom: 55px;
   }
 `

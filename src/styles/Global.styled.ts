@@ -22,7 +22,7 @@ export const GlobalStyle = createGlobalStyle`
   a {
     text-decoration: none;
     color: ${theme.colors.normalFont};
-    font-family: DM Sans;
+    font-family: DM Sans, sans-serif;
     font-size: 20px;
     font-weight: 500;
     line-height: 26px;

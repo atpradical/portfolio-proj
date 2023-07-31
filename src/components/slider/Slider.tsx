@@ -37,7 +37,9 @@ const Slide = styled.div`
   box-shadow: 2px 2px 100px 0 rgba(0, 0, 0, 0.20);
 `
 
-const Text = styled.p``
+const Text = styled.p`
+  color: ${theme.colors.normalFont}
+`
 
 const Name = styled.span`
   display: inline-block;

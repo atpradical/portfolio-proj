@@ -13,5 +13,5 @@ export const Logo = () => {
 };
 
 const StyledLogo = styled.div`
-  flex-grow: 1;
+  flex-grow: 5;
 `
