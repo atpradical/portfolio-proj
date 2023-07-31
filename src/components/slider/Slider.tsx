@@ -2,6 +2,8 @@ import React from 'react';
 import styled from "styled-components";
 import {FlexWrapper} from "../FlexWrapper";
 import {theme} from "styles/Theme";
+import {Text} from "components/Text";
+
 
 export const Slider = () => {
     return (
@@ -35,10 +37,6 @@ const Slide = styled.div`
   margin: 20px 0;
   border-radius: 20px;
   box-shadow: 2px 2px 100px 0 rgba(0, 0, 0, 0.20);
-`
-
-const Text = styled.p`
-  color: ${theme.colors.normalFont}
 `
 
 const Name = styled.span`

@@ -10,7 +10,7 @@ type LocationPropsType = {
 export const Location = (props: LocationPropsType) => {
     return (
         <StyledLocation>
-            <Icon iconId={"location"} iconWidth={"16px"} iconHeight={"12px"} iconViewBox={"0 0 16px 12px"}/>
+            <Icon iconId={"location"} iconWidth={"18px"} iconHeight={"11px"} iconViewBox={"0 0 17 11"}/>
             <CardText>{props.companyLocation}</CardText>
         </StyledLocation>
     );

@@ -73,8 +73,6 @@ const StyledFooterSection = styled.div`
       right: 60px;
     }
   }
-  
-
 `
 
 const Copyright = styled.small`

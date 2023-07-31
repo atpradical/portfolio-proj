@@ -4,6 +4,7 @@ import {Company} from "./company/Company";
 import {Location} from "./location/Location";
 import {Period} from "./period/Period";
 import {FlexWrapper} from "../FlexWrapper";
+import {theme} from "styles/Theme";
 
 type CardPropsType = {
     title: string
@@ -13,7 +14,7 @@ type CardPropsType = {
     period: string
 }
 
-export const Card: FC<CardPropsType> = ({title, companyName, companyLocation, period,activity}) => {
+export const Card: FC<CardPropsType> = ({title, companyName, companyLocation, period, activity}) => {
     return (
         <StyledCard>
             <FlexWrapper direction={"column"}>
@@ -32,8 +33,19 @@ export const Card: FC<CardPropsType> = ({title, companyName, companyLocation, pe
 };
 
 const StyledCard = styled.div`
-  background-color: #f694e6;
-  border: 1px solid darkred;
+  //outline: 1px solid red;
+  margin-bottom: 30px;
+  position: relative;
+  
+  &::after{
+    content:"";
+    display: inline-block;
+    position: absolute;
+    width:100%;
+    height: 1px;
+    bottom: -5px;
+    background-color: ${theme.colors.placeholderColor};
+  }
 `
 
 const CardSection = styled.div`
@@ -43,11 +55,23 @@ const CardSection = styled.div`
 `
 
 const CardTitle = styled.h3`
-  color: royalblue;
+  margin-bottom: 5px;
+  color: ${theme.colors.cardTitleFont};
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 1px;
 `
 
 const Activity = styled.span`
-  background: lightgreen;
+  padding: 2px 20px;
+  border-radius: 15px;
+  background-color: #D7FFE0;
+  color: #018C0F;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 20px;
+  text-transform: capitalize;
 `
 
 

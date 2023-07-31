@@ -21,7 +21,6 @@ export const Main = () => {
                     </PhotoWrapper>
                 </FlexWrapper>
             </Container>
-
         </MainStyled>
     );
 };

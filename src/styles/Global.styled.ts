@@ -48,7 +48,7 @@ export const GlobalStyle = createGlobalStyle`
   h3 {
     color: ${theme.colors.cardTitleFont};
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 400;
   }
   
   p {

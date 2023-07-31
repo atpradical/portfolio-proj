@@ -10,12 +10,10 @@ type PeriodPropsType = {
 export const Period = (props: PeriodPropsType) => {
     return (
         <StyledPeriod>
-            <Icon iconId={"calendar"} iconWidth={"16px"} iconHeight={"12px"} iconViewBox={"0 0 16px 12px"}/>
+            <Icon iconId={"calendar"} iconWidth={"23px"} iconHeight={"12px"} iconViewBox={"0 0 15 11"}/>
             <CardText>{props.period}</CardText>
         </StyledPeriod>
     );
 };
 
-const StyledPeriod = styled.div`
-
-`
+const StyledPeriod = styled.div``
