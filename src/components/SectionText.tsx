@@ -8,6 +8,5 @@ export const SectionText = styled.h2`
   font-style: normal;
   font-weight: 400;
   line-height: 26px;
-  
-  margin-bottom: 90px;
+  margin-bottom: 50px;
 `

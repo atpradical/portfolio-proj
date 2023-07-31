@@ -22,7 +22,7 @@ export const Projects = () => {
                 <SectionTitle>Projects</SectionTitle>
                 <SectionText>Things I’ve built so far</SectionText>
                 <TabMenu menuItems={projectItems}/>
-                <FlexWrapper wrap={"wrap"} justify={"space-between"} align={"flex-start"}>
+                <FlexWrapper wrap={"wrap"} justify={"space-between"} align={"flex-start"} gap={"45px"}>
                     <Project title={"Project Tile goes here"}
                              src={projectImg1}
                              text={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"}/>

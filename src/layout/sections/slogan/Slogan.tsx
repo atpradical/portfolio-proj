@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from "styled-components";
-import {SectionTitle} from "../../../components/SectionTitle";
-import {Button} from "../../../components/Button";
-import {FlexWrapper} from "../../../components/FlexWrapper";
+import {SectionTitle} from "components/SectionTitle";
+import {Button} from "components/Button";
+import {FlexWrapper} from "components/FlexWrapper";
 
 export const Slogan = () => {
     return (

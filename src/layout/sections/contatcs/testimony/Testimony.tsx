@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from "styled-components";
-import {SectionTitle} from "../../../components/SectionTitle";
-import {Icon} from "../../../components/icon/Icon";
-import {Slider} from "../../../components/slider/Slider";
-import {FlexWrapper} from "../../../components/FlexWrapper";
+import {SectionTitle} from "components/SectionTitle";
+import {Icon} from "components/icon/Icon";
+import {Slider} from "components/slider/Slider";
+import {FlexWrapper} from "components/FlexWrapper";
 
 export const Testimony = () => {
     return (
@@ -18,6 +18,9 @@ export const Testimony = () => {
 };
 
 const StyledTestimony = styled.section`
-  min-height: 30vh;
-  background-color: #8ba7ee;
+  margin: 0;
+  
+  ${SectionTitle} {
+    margin-bottom: 70px;
+  }
 `
