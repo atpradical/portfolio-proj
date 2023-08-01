@@ -1,23 +1,28 @@
 {
   "files": {
-    "main.css": "/portfolio-proj/static/css/main.e6c13ad2.css",
-    "main.js": "/portfolio-proj/static/js/main.624c20b1.js",
+    "main.css": "/portfolio-proj/static/css/main.31d6cfe0.css",
+    "main.js": "/portfolio-proj/static/js/main.63c4b360.js",
     "static/js/787.0d6b62d0.chunk.js": "/portfolio-proj/static/js/787.0d6b62d0.chunk.js",
-    "static/media/icon-sprite.svg": "/portfolio-proj/static/media/icon-sprite.7f8d7bb00cbadd5900ed8065f60f1598.svg",
+    "static/media/photo.webp": "/portfolio-proj/static/media/photo.a22b49ffd959317a710d.webp",
+    "static/media/icon-sprite.svg": "/portfolio-proj/static/media/icon-sprite.362cb9adfd76ef928b4786d3355c6fab.svg",
     "static/media/proj-2.webp": "/portfolio-proj/static/media/proj-2.8791346dbbecc4456ba2.webp",
-    "static/media/photo.webp": "/portfolio-proj/static/media/photo.37298cf59b22695fd144.webp",
     "static/media/proj-4.webp": "/portfolio-proj/static/media/proj-4.c49300b87d6eb467ac3a.webp",
     "static/media/proj-5.webp": "/portfolio-proj/static/media/proj-5.e3fd2df679eba010fb8f.webp",
+    "static/media/drawing.webp": "/portfolio-proj/static/media/drawing.8a3cd9f536a8eeee5d00.webp",
     "static/media/proj-1.webp": "/portfolio-proj/static/media/proj-1.d21e7e903195dcacda4e.webp",
     "static/media/proj-3.webp": "/portfolio-proj/static/media/proj-3.477f111d7c19a4351bc6.webp",
+    "static/media/calendar.svg": "/portfolio-proj/static/media/calendar.d2dee61640054a0210d91de33c3a106a.svg",
     "static/media/proj-6.webp": "/portfolio-proj/static/media/proj-6.0fa1c66469af80820203.webp",
+    "static/media/location.svg": "/portfolio-proj/static/media/location.e8e892a134db0521d75db78ccc06b672.svg",
+    "static/media/proj-github.svg": "/portfolio-proj/static/media/proj-github.6fbbdf5046131f14cec1085ca397d8cc.svg",
+    "static/media/proj-link-chain.svg": "/portfolio-proj/static/media/proj-link-chain.3fd6d8d971fdaba786a179c5a75a4a1d.svg",
     "index.html": "/portfolio-proj/index.html",
-    "main.e6c13ad2.css.map": "/portfolio-proj/static/css/main.e6c13ad2.css.map",
-    "main.624c20b1.js.map": "/portfolio-proj/static/js/main.624c20b1.js.map",
+    "static/media/office-building.svg": "/portfolio-proj/static/media/office-building.e9b5378819105428f61d16f693a2f139.svg",
+    "main.63c4b360.js.map": "/portfolio-proj/static/js/main.63c4b360.js.map",
     "787.0d6b62d0.chunk.js.map": "/portfolio-proj/static/js/787.0d6b62d0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6c13ad2.css",
-    "static/js/main.624c20b1.js"
+    "static/css/main.31d6cfe0.css",
+    "static/js/main.63c4b360.js"
   ]
 }
