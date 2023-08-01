@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
-import {Icon} from "../../icon/Icon";
 import {CardText} from "../company/Company";
+import location from "assets/img/prog-img/location.svg";
 
 type LocationPropsType = {
     companyLocation?: string;
@@ -9,14 +9,30 @@ type LocationPropsType = {
 
 export const Location = (props: LocationPropsType) => {
     return (
+        // <StyledLocation isEmpty={!props.companyLocation}>
         <StyledLocation>
-            <Icon iconId={"location"} iconWidth={"18px"} iconHeight={"11px"} iconViewBox={"0 0 17 11"}/>
             <CardText>{props.companyLocation}</CardText>
         </StyledLocation>
     );
 };
 
-const StyledLocation = styled.div`
+// const StyledLocation = styled.span<{isEmpty: boolean}>`
+const StyledLocation = styled.span`
+  
+  position: relative;
+//"{display: {(props) => props.isEmpty && 'none'};"
 
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    background-image: url(${location});
+    background-repeat: no-repeat;
+    bottom: 1px;
+    left: -20px;
+  }
+  
 `
 

@@ -8,12 +8,10 @@ import {Text} from "components/Text";
 export const About = () => {
     return (
         <StyledAbout>
-            <FlexWrapper direction={"column"}>
                 <SectionTitle>About Me</SectionTitle>
                 <Text>The Generator App is an online tool that helps you to export ready-made templates ready to work as
                     your future website. It helps you to combine slides, panels and other components and export it as a
                     set of static files: HTML/CSS/JS.</Text>
-            </FlexWrapper>
         </StyledAbout>
     );
 };

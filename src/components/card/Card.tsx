@@ -17,42 +17,39 @@ type CardPropsType = {
 export const Card: FC<CardPropsType> = ({title, companyName, companyLocation, period, activity}) => {
     return (
         <StyledCard>
-            <FlexWrapper direction={"column"}>
-                <CardSection>
-                    <CardTitle>{title}</CardTitle>
-                    <Activity>{activity}</Activity>
-                </CardSection>
-                <CardSection>
-                    <Company companyName={companyName}/>
-                    <Location companyLocation={companyLocation}/>
-                    <Period period={period}/>
-                </CardSection>
-            </FlexWrapper>
+            <CardSection>
+                <FlexWrapper justify={"space-between"}>
+                    {title && <CardTitle>{title}</CardTitle>}
+                    {title && <Activity>{activity}</Activity>}
+                </FlexWrapper>
+            </CardSection>
+            <CardSection>
+                <FlexWrapper justify={"space-between"}>
+                    {companyName && <Company companyName={companyName}/>}
+                    {companyLocation && <Location companyLocation={companyLocation}/>}
+                    {period && <Period period={period}/>}
+                </FlexWrapper>
+            </CardSection>
         </StyledCard>
     );
 };
 
 const StyledCard = styled.div`
-  //outline: 1px solid red;
   margin-bottom: 30px;
   position: relative;
-  
-  &::after{
-    content:"";
+
+  &::after {
+    content: "";
     display: inline-block;
     position: absolute;
-    width:100%;
+    width: 100%;
     height: 1px;
     bottom: -5px;
     background-color: ${theme.colors.placeholderColor};
   }
 `
 
-const CardSection = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`
+const CardSection = styled.div``
 
 const CardTitle = styled.h3`
   margin-bottom: 5px;
@@ -63,11 +60,12 @@ const CardTitle = styled.h3`
 `
 
 const Activity = styled.span`
-  padding: 2px 20px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
   border-radius: 15px;
   background-color: #D7FFE0;
   color: #018C0F;
-  text-align: center;
   font-size: 12px;
   font-weight: 600;
   line-height: 20px;

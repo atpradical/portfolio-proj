@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from "styled-components";
-import {Icon} from "../../icon/Icon";
 import {theme} from "styles/Theme";
+import officeBuilding from "assets/img/prog-img/office-building.svg";
+
 
 type CompanyPropsType = {
     companyName: string;
@@ -10,14 +11,26 @@ type CompanyPropsType = {
 export const Company = (props: CompanyPropsType) => {
     return (
         <StyledCompany>
-            <Icon iconId={"officeBuilding"} iconWidth={"18px"} iconHeight={"11px"} iconViewBox={"0 0 10px 8px"}/>
             <CardText>{props.companyName}</CardText>
         </StyledCompany>
     );
 };
 
-const StyledCompany = styled.div`
+const StyledCompany = styled.span`
+  padding-left: 20px;
+  width: 40%;
+  position: relative;
 
+  &::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-image: url(${officeBuilding});
+    background-repeat: no-repeat;
+    bottom: 1px;
+    left: 0;
 `
 
 export const CardText = styled.span`
@@ -25,6 +38,5 @@ export const CardText = styled.span`
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
-
   letter-spacing: 1px;
 `
