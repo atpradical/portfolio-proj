@@ -6,7 +6,7 @@ export const Logo = () => {
     return (
         <StyledLogo>
             <a href="">
-                <Icon iconId={'logo'}/>
+                <Icon iconId={'logo'} iconWidth={'150px'} iconHeight={'55'} iconViewBox={'0 -25 350 160'}/>
             </a>
         </StyledLogo>
     );
