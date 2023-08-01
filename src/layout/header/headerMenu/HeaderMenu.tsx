@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import {Link} from "components/Link";
 
 export const HeaderMenu = (props: { menuItems: Array<string> }) => {
     return (
@@ -17,17 +18,21 @@ export const HeaderMenu = (props: { menuItems: Array<string> }) => {
     );
 };
 
+export const ListItem = styled.li`
+
+  ${Link} {
+    margin-right: 50px;
+    text-align: center;
+    font-family: DM Sans, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 26px;
+  }
+`
+
 const StyledMenu = styled.nav`
   ul {
     display: flex;
     justify-content: center;
   }
-`
-
-const ListItem = styled.li`
-  margin-right: 50px;
-`
-
-const Link = styled.a`
-
 `

@@ -26,7 +26,7 @@ export const Main = () => {
 };
 
 const MainStyled = styled.section`
-  min-height: 70vh;
+  min-height: 50vh;
   display: flex;
 `
 
@@ -85,4 +85,5 @@ const Photo = styled.img`
   object-fit: cover;
   border-radius: 50%;
   background-position: center;
+  filter: grayscale(90%);
 `

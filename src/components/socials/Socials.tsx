@@ -34,4 +34,8 @@ const StyledSocialsList = styled.ul`
 
 const SocialsItem = styled.li``
 
-const SocialsLink = styled.a``
+const SocialsLink = styled.a`
+
+  &:hover {}
+  cursor: pointer;
+`
