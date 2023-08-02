@@ -7,6 +7,7 @@ import {Container} from "components/Container";
 import {FlexWrapper} from "components/FlexWrapper";
 import {theme} from "styles/Theme";
 import {HeaderMenu} from "layout/header/headerMenu/HeaderMenu";
+import background from "assets/img/drawing.webp";
 
 const items = ["Home", "About", "Tech Stack", "Projects", "Contact"];
 

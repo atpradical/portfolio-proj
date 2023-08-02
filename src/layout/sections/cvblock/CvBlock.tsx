@@ -19,13 +19,15 @@ export const CvBlock = () => {
 };
 
 const StyledCvBlock = styled.section`
-
+  padding: 10vh 0;
+  position: relative;
+  
   &::after {
     content: "";
     position: absolute;
     width: 40%;
     height: 100%;
-    top: 60vh;
+    top: 0;
     right: 0;
     z-index: 1;
     background-image: url(${background});
