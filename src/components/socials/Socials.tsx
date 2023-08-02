@@ -22,7 +22,7 @@ export const SocialsIconList = () => {
             <SocialsItem>
                 <SocialsLink>
                     <Icon iconId={"linkedin"}
-                          iconWidth={"31px"} iconHeight={"31px"} iconViewBox={"0 0 31px 31px"}
+                          iconWidth={"33px"} iconHeight={"33px"} iconViewBox={"0 0 30 30 "}
                           href={"https://www.linkedin.com/"} title={"go to linkedIn account"}/>
                 </SocialsLink>
             </SocialsItem>
@@ -32,7 +32,7 @@ export const SocialsIconList = () => {
 
 const StyledSocialsList = styled.ul`
   display: flex;
-  gap: 20px;
+  gap: 10px;
 `
 
 const SocialsItem = styled.li``
