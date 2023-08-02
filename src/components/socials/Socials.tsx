@@ -8,19 +8,22 @@ export const SocialsIconList = () => {
             <SocialsItem>
                 <SocialsLink>
                     <Icon iconId={"github"}
-                          iconWidth={"30px"} iconHeight={"30px"} iconViewBox={"0 0 30px 30px"}/>
+                          iconWidth={"30px"} iconHeight={"30px"} iconViewBox={"0 0 30px 30px"}
+                          href={"https://github.com/atpradical"} title={"go to github account"}/>
                 </SocialsLink>
             </SocialsItem>
             <SocialsItem>
                 <SocialsLink>
-                    <Icon iconId={"twitter"}
-                          iconWidth={"31px"} iconHeight={"31px"} iconViewBox={"0 0 31px 31px"}/>
+                    <Icon iconId={"telegram"}
+                          iconWidth={"32px"} iconHeight={"32px"} iconViewBox={"0 0 32px 32px"}
+                          href={"https://t.me/Ivan_Dolgikh"} title={"go to telegram account"}/>
                 </SocialsLink>
             </SocialsItem>
             <SocialsItem>
                 <SocialsLink>
                     <Icon iconId={"linkedin"}
-                          iconWidth={"31px"} iconHeight={"31px"} iconViewBox={"0 0 31px 31px"}/>
+                          iconWidth={"31px"} iconHeight={"31px"} iconViewBox={"0 0 31px 31px"}
+                          href={"https://www.linkedin.com/"} title={"go to linkedIn account"}/>
                 </SocialsLink>
             </SocialsItem>
         </StyledSocialsList>
@@ -36,6 +39,8 @@ const SocialsItem = styled.li``
 
 const SocialsLink = styled.a`
 
-  &:hover {}
+  &:hover {
+  }
+
   cursor: pointer;
 `

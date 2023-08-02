@@ -17,7 +17,7 @@ export const Main = () => {
                         <MainTitle>A Web Developer</MainTitle>
                     </div>
                     <PhotoWrapper>
-                        <Photo src={photo} alt="Ivan Dolgikh"/>
+                        <Photo src={photo} alt="portrait of Ivan Dolgikh"/>
                     </PhotoWrapper>
                 </FlexWrapper>
             </Container>
@@ -68,7 +68,6 @@ const PhotoWrapper = styled.div`
     content: "";
     width: 370px;
     height: 370px;
-    background-color: green;
     border-radius: 50%;
     background-image: ${theme.colors.gradient0};
     

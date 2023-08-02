@@ -20,22 +20,17 @@ export const CvBlock = () => {
 
 const StyledCvBlock = styled.section`
 
-
-  // &::after {
-  //   content: "";
-  //   position: absolute;
-  //   width: 40%;
-  //   height: 100%;
-  //   top: 0;
-  //   right: 0;
-  //   z-index: 1;
-  //   background-image: url(${background});
-  //   background-position: right;
-  //   background-size: cover;
-  //   background-repeat: no-repeat;
-
+  &::after {
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    top: 50vh;
+    right: 0;
+    z-index: 1;
+    background-image: url(${background});
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
-
-  
-  
 `
