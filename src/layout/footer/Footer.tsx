@@ -39,7 +39,8 @@ const StyledFooter = styled.footer`
     content: "";
     position: absolute;
     display: inline-block;
-    width: 80%;
+    max-width: 1220px;
+    width: 100%;
     height: 1px;
     background-color: ${theme.colors.lightFont};
     bottom: 55%;
