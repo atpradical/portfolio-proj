@@ -25,7 +25,7 @@ const StyledCvBlock = styled.section`
     position: absolute;
     width: 40%;
     height: 100%;
-    top: 50vh;
+    top: 60vh;
     right: 0;
     z-index: 1;
     background-image: url(${background});

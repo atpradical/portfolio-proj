@@ -45,7 +45,7 @@ export const TechStack = () => {
 };
 
 const StyledTechStack = styled.section`
-  min-height: 50vh;
+
   margin: 50px 0;
 `
 
