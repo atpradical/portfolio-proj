@@ -16,7 +16,7 @@ export const Footer = () => {
             <Container>
                 <FlexWrapper direction={"column"} justify={"center"}>
                     <StyledFooterSection>
-                        <Logo/>
+                        <Logo iconId={"logo"}/>
                         <Link href="mailto:ivan.dolgikh1199@gmail.com">ivan.dolgikh1199@gmail.com</Link>
                         <SocialsIconList/>
                     </StyledFooterSection>

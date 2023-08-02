@@ -17,6 +17,6 @@ export const Button = styled.button`
     background-image: ${theme.colors.gradient90};
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    box-shadow: 2px 2px 100px 0 rgba(0, 0, 0, .50);
+    box-shadow: 2px 2px 100px 0 rgba(0, 0, 0, .20);
   }
 `
