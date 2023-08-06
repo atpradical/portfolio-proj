@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import {Icon} from "../icon/Icon";
+import {theme} from "styles/Theme";
 
 export const SocialsIconList = () => {
     return (
@@ -30,17 +31,17 @@ export const SocialsIconList = () => {
     );
 };
 
-const StyledSocialsList = styled.ul`
+export const StyledSocialsList = styled.ul`
+  margin: 0 20px;
   display: flex;
   gap: 10px;
 `
 
-const SocialsItem = styled.li``
+const SocialsItem = styled.li`
+`
 
-const SocialsLink = styled.a`
-
+const SocialsLink = styled.div`
   &:hover {
+    cursor: pointer;
   }
-
-  cursor: pointer;
 `

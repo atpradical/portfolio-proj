@@ -30,7 +30,7 @@ export const Project = (props: ProjectPropsType) => {
 };
 
 const StyledProject = styled.div`
-  max-width: 375px;
+  max-width: 355px;
   width: 100%;
   border-radius: 20px;
   box-shadow: 2px 2px 100px 0 rgba(0, 0, 0, 0.20);

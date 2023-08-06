@@ -33,6 +33,7 @@ export const Contacts = () => {
 
 const StyledContacts = styled.section`
   flex-grow: 1;
+  
 `
 
 const StyledForm = styled.form`

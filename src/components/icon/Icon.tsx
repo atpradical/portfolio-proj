@@ -13,13 +13,11 @@ type IconPropsType = {
 
 export const Icon = (props: IconPropsType) => {
     return (
-        <StyledIcon>
-            <a href={props.href} title={props.title} target={"_blank"}>
+        <StyledIcon href={props.href} title={props.title} target={"_blank"}>
             <svg width={props.iconWidth || "50"} height={props.iconHeight || "50"}
                  viewBox={props.iconViewBox || "0 0 50 50"} xmlns="http://www.w3.org/2000/svg">
                 <use xlinkHref={`${iconsSprite}#${props.iconId}`}/>
             </svg>
-            </a>
         </StyledIcon>
 
     );

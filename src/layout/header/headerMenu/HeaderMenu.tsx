@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import {Link} from "components/Link";
+import {theme} from "styles/Theme";
 
 export const HeaderMenu = (props: { menuItems: Array<string> }) => {
     return (
@@ -18,10 +19,21 @@ export const HeaderMenu = (props: { menuItems: Array<string> }) => {
     );
 };
 
+const StyledMenu = styled.nav`
+  ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  @media ${theme.media.desktopTiny} {
+    display: none;
+  }
+`
+
 export const ListItem = styled.li`
 
   ${Link} {
-    margin-right: 50px;
     text-align: center;
     font-family: DM Sans, sans-serif;
     font-size: 20px;
@@ -30,9 +42,3 @@ export const ListItem = styled.li`
   }
 `
 
-const StyledMenu = styled.nav`
-  ul {
-    display: flex;
-    justify-content: center;
-  }
-`
