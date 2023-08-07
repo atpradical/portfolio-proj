@@ -7,7 +7,7 @@ export const Education = () => {
     return (
         <StyledEducation>
             <SectionTitle>Education</SectionTitle>
-            <Card title={"Bachelor in Electronics & Communication"}
+            <Card title={"Bachelor in Electronics & Co."}
                   activity={"Full Time"}
                   companyName={"Bangalore Instutute of Technology"}
                   period={"Aug 2015 - Dec 2020"}/>

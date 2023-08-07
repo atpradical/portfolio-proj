@@ -2,6 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import {CardText} from "../company/Company";
 import location from "assets/img/prog-img/location.svg";
+import {theme} from "styles/Theme";
 
 type LocationPropsType = {
     companyLocation?: string;
@@ -34,5 +35,10 @@ const StyledLocation = styled.span`
     left: -20px;
   }
   
+  @media ${theme.media.mobile} {
+    max-width: 520px;
+    width:100%;
+    margin-left: 20px;
+  }
 `
 

@@ -35,8 +35,13 @@ const StyledHeader = styled.header`
   z-index: 99999;
   
   & ${StyledSocialsList} {
+    
     @media ${theme.media.desktopTiny} {
       margin-right: 70px;
+    }
+    
+    @media screen and (max-width: 380px) {
+        display: none;
     }
   }
 `

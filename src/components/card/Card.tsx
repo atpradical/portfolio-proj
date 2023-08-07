@@ -5,6 +5,7 @@ import {Location} from "./location/Location";
 import {Period} from "./period/Period";
 import {FlexWrapper} from "../FlexWrapper";
 import {theme} from "styles/Theme";
+import {font} from "styles/Common";
 
 type CardPropsType = {
     title: string
@@ -24,7 +25,7 @@ export const Card: FC<CardPropsType> = ({title, companyName, companyLocation, pe
                 </FlexWrapper>
             </CardSection>
             <CardSection>
-                <FlexWrapper justify={"space-between"}>
+                <FlexWrapper justify={"space-between"} id={"section-column"} wrap={"wrap"}>
                     {companyName && <Company companyName={companyName}/>}
                     {companyLocation && <Location companyLocation={companyLocation}/>}
                     {period && <Period period={period}/>}
@@ -33,6 +34,7 @@ export const Card: FC<CardPropsType> = ({title, companyName, companyLocation, pe
         </StyledCard>
     );
 };
+
 
 const StyledCard = styled.div`
   margin-bottom: 30px;
@@ -52,24 +54,37 @@ const StyledCard = styled.div`
 const CardSection = styled.div``
 
 const CardTitle = styled.h3`
+  ${font({family: "Poppins", weight: 400, Fmax: 20, Fmin: 12})}
   margin-bottom: 5px;
   color: ${theme.colors.cardTitleFont};
-  font-size: 20px;
   line-height: 28px;
   letter-spacing: 1px;
 `
 
 const Activity = styled.span`
-  display: flex;
-  align-items: center;
-  padding: 0 20px;
-  border-radius: 15px;
-  background-color: #D7FFE0;
+
+  position: relative;
+  z-index: 2;
+  margin-left: 30px;
   color: #018C0F;
   font-size: 12px;
   font-weight: 600;
   line-height: 20px;
   text-transform: capitalize;
+  white-space: nowrap;
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 30px;
+    left: -50%;
+    top: -15%;
+    transform: translateX(15%);
+    z-index: -1;
+    background-color: #D7FFE0;
+    border-radius: 15px;
+  }
 `
 
 

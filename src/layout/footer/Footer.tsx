@@ -17,7 +17,8 @@ export const Footer = () => {
                 <FlexWrapper direction={"column"} justify={"center"}>
                     <StyledFooterSection>
                         <Logo iconId={"logo"}/>
-                        <Link href="mailto:ivan.dolgikh1199@gmail.com" title={"mail to Ivan"}>ivan.dolgikh1199@gmail.com</Link>
+                        <Link href="mailto:ivan.dolgikh1199@gmail.com"
+                              title={"mail to Ivan"}>ivan.dolgikh1199@gmail.com</Link>
                         <SocialsIconList/>
                     </StyledFooterSection>
                     <StyledFooterSection>
@@ -47,6 +48,13 @@ const StyledFooter = styled.footer`
     left: 50%;
     transform: translateX(-50%);
   }
+
+  @media screen and (max-width: 630px) {
+    &::after {
+      bottom: 35%;
+    }
+  }
+
 `
 
 const StyledFooterSection = styled.div`
@@ -54,28 +62,30 @@ const StyledFooterSection = styled.div`
   justify-content: space-between;
   align-items: center;
   margin: 30px 0;
-  
+
   & a {
     color: ${theme.colors.titleFont};
     font-size: 18px;
   }
 
   & ${Link} {
-    margin-right: 10px;
+    margin: 0 20px;
     font-size: 18px;
     font-weight: 400;
   }
-  
+
   &:nth-of-type(1) ${Link} {
     text-transform: lowercase;
   }
-  
-  @media ${theme.media.tablet} {
-    flex-wrap: wrap;
+
+  @media screen and (max-width: 630px) {
+    flex-direction: column;
+    gap: 20px;
   }
 `
 
 const Copyright = styled.small`
+  display: block;
   font-size: 14px;
 
   & > span {

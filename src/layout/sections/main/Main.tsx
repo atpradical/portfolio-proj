@@ -27,8 +27,9 @@ export const Main = () => {
 };
 
 const MainStyled = styled.section`
-  min-height: 50vh;
+  min-height: 100vh;
   display: flex;
+  margin-top: 10%;
 `
 
 const MainTitle = styled.h1`

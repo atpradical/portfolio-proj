@@ -31,6 +31,12 @@ const StyledCompany = styled.span`
     background-repeat: no-repeat;
     bottom: 1px;
     left: 0;
+  }
+
+  @media ${theme.media.mobile} {
+    max-width: 520px;
+    width: 100%;
+  }
 `
 
 export const CardText = styled.span`

@@ -137,7 +137,6 @@ const Image = styled.img`
 
 const Description = styled.div`
   padding: 0 30px 25px;
-
 `
 
 const Title = styled.h3`

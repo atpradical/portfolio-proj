@@ -2,6 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import {CardText} from "../company/Company";
 import calendar from "assets/img/prog-img/calendar.svg";
+import {theme} from "styles/Theme";
 
 type PeriodPropsType = {
     period: string;
@@ -29,4 +30,11 @@ const StyledPeriod = styled.span`
     background-repeat: no-repeat;
     bottom: 1px;
     left: -20px;
+  }
+  
+  @media ${theme.media.mobile} {
+    max-width: 520px;
+    width:100%;
+    margin-left: 20px;
+  }
 `

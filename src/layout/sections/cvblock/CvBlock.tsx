@@ -5,6 +5,7 @@ import {Experience} from "layout/sections/cvblock/experience/Experience";
 import {Education} from "layout/sections/cvblock/education/Education";
 import {Container} from "components/Container";
 import background from "assets/img/drawing.webp";
+import {theme} from "styles/Theme";
 
 export const CvBlock = () => {
     return (
@@ -34,5 +35,9 @@ const StyledCvBlock = styled.section`
     background-position: right;
     background-size: cover;
     background-repeat: no-repeat;
+  }
+  
+  @media ${theme.media.tablet} {
+      margin: 0;
   }
 `
