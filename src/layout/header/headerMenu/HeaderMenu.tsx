@@ -19,7 +19,7 @@ export const HeaderMenu = (props: { menuItems: Array<string> }) => {
     );
 };
 
-const StyledMenu = styled.nav`
+export const StyledMenu = styled.nav`
   ul {
     display: flex;
     justify-content: center;
