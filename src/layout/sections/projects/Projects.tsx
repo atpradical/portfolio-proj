@@ -12,6 +12,7 @@ import projectImg6 from "../../../assets/img/prog-img/proj-6.webp";
 import {Container} from "components/Container";
 import {SectionText} from "components/SectionText";
 import {TabMenu} from "layout/sections/projects/tabMenu/TabMenu";
+import {theme} from "styles/Theme";
 
 const projectItems = ["all", "landing page", "react", "spa"];
 
@@ -22,7 +23,7 @@ export const Projects = () => {
                 <SectionTitle>Projects</SectionTitle>
                 <SectionText>Things I’ve built so far</SectionText>
                 <TabMenu menuItems={projectItems}/>
-                <FlexWrapper wrap={"wrap"} justify={"space-between"} align={"flex-start"} gap={"45px"}>
+                <FlexWrapper wrap={"wrap"} justify={"space-around"} align={"flex-start"} gap={"45px"}>
                     <Project title={"Project Tile goes here"}
                              src={projectImg1}
                              text={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"}/>
@@ -47,4 +48,18 @@ export const Projects = () => {
     );
 };
 
-const StyledProjects = styled.section``
+const StyledProjects = styled.section`
+ 
+  @media ${theme.media.tablet} {
+    & ${FlexWrapper} {
+      padding: 0 100px;
+    }
+  }
+  
+  @media ${theme.media.tablet} {
+    & ${FlexWrapper} {
+      padding: 0;
+    }
+  }
+  
+`

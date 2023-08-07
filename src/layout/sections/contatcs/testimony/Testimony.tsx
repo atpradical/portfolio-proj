@@ -18,7 +18,10 @@ export const Testimony = () => {
 };
 
 const StyledTestimony = styled.section`
+  max-width: 500px;
+  width:100%;
   margin: 0;
+  flex-shrink: 2;
   
   ${SectionTitle} {
     margin-bottom: 55px;

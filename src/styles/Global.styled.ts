@@ -43,6 +43,10 @@ export const GlobalStyle = createGlobalStyle`
   section {
     background-color: ${theme.colors.primary};
     margin: 100px 0;
+    
+    @media ${theme.media.mobile} {
+      margin: 50px 0;
+    }
   }
   
   h3 {

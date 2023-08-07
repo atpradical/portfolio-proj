@@ -69,6 +69,10 @@ const StyledFooterSection = styled.div`
   &:nth-of-type(1) ${Link} {
     text-transform: lowercase;
   }
+  
+  @media ${theme.media.tablet} {
+    flex-wrap: wrap;
+  }
 `
 
 const Copyright = styled.small`

@@ -13,9 +13,9 @@ export const Contacts = () => {
     return (
         <StyledContacts>
             <Container>
-                <FlexWrapper justify={"space-between"}>
+                <FlexWrapper justify={"space-around"} gap={"100px"}>
                     <Testimony/>
-                    <FlexWrapper direction={"column"} grow={"1"} >
+                    <FlexWrapper direction={"column"} id={"contactsBlock"}>
                         <SectionTitle>Contacts</SectionTitle>
                         <SectionText>I'm available for freelance</SectionText>
                         <StyledForm>
@@ -32,12 +32,21 @@ export const Contacts = () => {
 };
 
 const StyledContacts = styled.section`
-  flex-grow: 1;
-  
+
+    ${FlexWrapper} > ${FlexWrapper} {
+      max-width: 600px;
+      width: 100%;
+    }
+
+  @media ${theme.media.desktopTiny} {
+    
+    & ${FlexWrapper}:nth-child(1) {
+      flex-wrap: wrap;
+    }
+  }
 `
 
 const StyledForm = styled.form`
-  max-width: 540px;
   width: 100%;
   display: flex;
   flex-direction: column;

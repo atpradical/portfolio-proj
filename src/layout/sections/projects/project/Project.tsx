@@ -36,7 +36,7 @@ const StyledProject = styled.div`
   box-shadow: 2px 2px 100px 0 rgba(0, 0, 0, 0.20);
 
   ${Link} ~ ${Link} {
-    margin-left: 60px;
+    margin-left: 40px;
   }
 
   ${Link}:nth-of-type(1)::before {
@@ -68,21 +68,35 @@ const StyledProject = styled.div`
   ${Link}:nth-of-type(2)::after {
     left: 30px;
   }
+
+  @media screen and (max-width: 1200px) {
+    flex-grow: 1;
+  }
+
+  @media ${theme.media.mobile} {
+    max-width: 300px;
+    width: 100%;
+  }
 `
 const ImageWrapper = styled.div`
   position: relative;
 
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 20px 20px 0 0;
+    background: rgba(0, 0, 0, .3);
+    backdrop-filter: blur(4px);
+    opacity: 0;
+  }
+
   &:hover {
     &::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      border-radius: 20px 20px 0 0;
-      background: rgba(0, 0, 0, .3);
-      backdrop-filter: blur(4px);
+      opacity: 1;
     }
 
     ${Button} {
@@ -101,6 +115,16 @@ const ImageWrapper = styled.div`
     padding: 10px;
     border: none;
     background-color: transparent;
+  }
+
+  @media ${theme.media.tablet} {
+      &::before {
+        opacity: 1;
+      }
+
+    ${Button} {
+      opacity: 1;
+    }
   }
 `
 
@@ -122,7 +146,11 @@ const Title = styled.h3`
   text-align: center;
   font-size: 28px;
   font-weight: 500;
-  line-height: 26px;
+  line-height: 1;
+
+  @media ${theme.media.mobile} {
+    font-size: 22px;
+  }
 `
 
 const Text = styled.p`
