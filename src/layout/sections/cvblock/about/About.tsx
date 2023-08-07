@@ -2,8 +2,6 @@ import React from 'react';
 import {SectionTitle} from "components/SectionTitle";
 import styled from "styled-components";
 import {Text} from "components/Text";
-import {theme} from "styles/Theme";
-import {font} from "styles/Common";
 
 
 export const About = () => {

@@ -20,7 +20,7 @@ export const CvBlock = () => {
 };
 
 const StyledCvBlock = styled.section`
-  padding: 10vh 0;
+  margin-top: 50px;
   position: relative;
   
   &::after {
@@ -35,9 +35,5 @@ const StyledCvBlock = styled.section`
     background-position: right;
     background-size: cover;
     background-repeat: no-repeat;
-  }
-  
-  @media ${theme.media.tablet} {
-      margin: 0;
   }
 `

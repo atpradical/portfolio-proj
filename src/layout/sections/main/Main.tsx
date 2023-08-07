@@ -30,6 +30,12 @@ const MainStyled = styled.section`
   min-height: 100vh;
   display: flex;
   margin-top: 10%;
+
+  @media ${theme.media.tablet} {
+    & {
+      margin-top: 150px;
+    }
+  }
 `
 
 const MainTitle = styled.h1`
