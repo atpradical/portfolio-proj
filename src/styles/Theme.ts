@@ -1,5 +1,3 @@
-import {CardText} from "components/card/company/Company";
-
 export const theme = {
     colors: {
         primary: "#FFFFFF",

@@ -3,15 +3,9 @@ import {theme} from "styles/Theme";
 import {font} from "styles/Common";
 
 const Main = styled.section`
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
-  margin-top: 10%;
-
-  @media ${theme.media.tablet} {
-    & {
-      margin-top: 150px;
-    }
-  }
+  margin: 100px 0 70px;
 `
 
 const MainTitle = styled.h1`
@@ -20,7 +14,7 @@ const MainTitle = styled.h1`
   font-style: normal;
   line-height: 1.4;
   letter-spacing: -1px;
-  
+
   @media ${theme.media.mobile} {
     white-space: nowrap;
   }
@@ -68,7 +62,7 @@ const PhotoWrapper = styled.div`
     z-index: -1;
     left: -10.5px;
     top: -10.5px;
-    
+
     @media ${theme.media.mobile} {
       width: 330px;
       height: 330px;

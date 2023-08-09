@@ -4,10 +4,9 @@ import {SocialsIconList} from "components/socials/Socials";
 import {FlexWrapper} from "components/FlexWrapper";
 import {Container} from "components/Container";
 import {Link} from "components/Link";
-import {DesktopMenu} from "layout/header/headerMenu/desctopMenu/DesktopMenu";
 import {S} from "./Footer_Styles"
+import {Copyright} from "components/copyright/Copyright";
 
-const items = ["Home", "About", "Tech Stack", "Projects", "Contact"];
 
 export const Footer: React.FC = () => {
     return (
@@ -20,11 +19,7 @@ export const Footer: React.FC = () => {
                               title={"mail to Ivan"}>ivan.dolgikh1199@gmail.com</Link>
                         <SocialsIconList/>
                     </S.FooterSection>
-                    <S.FooterSection>
-                        <DesktopMenu menuItems={items}/>
-                        <S.Copyright>© 2023 Designed and built
-                            by <span>Ivan Dolgikh</span> with <span>Love</span> & <span>Coffee</span></S.Copyright>
-                    </S.FooterSection>
+                    <Copyright/>
                 </FlexWrapper>
             </Container>
         </S.Footer>

@@ -3,7 +3,7 @@ import {theme} from "styles/Theme";
 import {Link} from "components/Link";
 
 const Footer = styled.footer`
-  padding-bottom: 40px;
+  padding-bottom: 20px;
   position: relative;
 
   &::after {
@@ -14,14 +14,15 @@ const Footer = styled.footer`
     width: 100%;
     height: 1px;
     background-color: ${theme.colors.lightFont};
-    bottom: 55%;
+    bottom: 30%;
     left: 50%;
     transform: translateX(-50%);
   }
 
-  @media screen and (max-width: 630px) {
+  @media ${theme.media.tablet} {
     &::after {
-      bottom: 35%;
+      width: 70%;
+      bottom: 20%;
     }
   }
 `
@@ -47,25 +48,14 @@ const FooterSection = styled.div`
     text-transform: lowercase;
   }
 
-  @media screen and (max-width: 630px) {
+  @media ${theme.media.tablet} {
+    margin-bottom: 30px;
     flex-direction: column;
     gap: 20px;
   }
 `
 
-const Copyright = styled.small`
-  display: block;
-  font-size: 14px;
-
-  & > span {
-    background-image: ${theme.colors.gradient90};
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-`
-
 export const S = {
     Footer,
-    FooterSection,
-    Copyright
+    FooterSection
 }
