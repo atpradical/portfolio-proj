@@ -1,48 +1,14 @@
 import React from 'react';
-import styled from "styled-components";
-import {theme} from "styles/Theme";
-import officeBuilding from "assets/img/prog-img/office-building.svg";
-
+import {SC} from "./Company_Styles"
 
 type CompanyPropsType = {
     companyName: string;
 }
 
-export const Company = (props: CompanyPropsType) => {
+export const Company:React.FC<CompanyPropsType> = (props: CompanyPropsType) => {
     return (
-        <StyledCompany>
-            <CardText>{props.companyName}</CardText>
-        </StyledCompany>
+        <SC.Company>
+            <SC.CardText>{props.companyName}</SC.CardText>
+        </SC.Company>
     );
 };
-
-const StyledCompany = styled.span`
-  padding-left: 20px;
-  width: 40%;
-  position: relative;
-
-  &::before {
-    content: "";
-    display: inline-block;
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    background-image: url(${officeBuilding});
-    background-repeat: no-repeat;
-    bottom: 1px;
-    left: 0;
-  }
-
-  @media ${theme.media.mobile} {
-    max-width: 520px;
-    width: 100%;
-  }
-`
-
-export const CardText = styled.span`
-  color: ${theme.colors.cardTextFont};
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 500;
-  letter-spacing: 1px;
-`

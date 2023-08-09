@@ -1,29 +1,18 @@
 import React from 'react';
-import styled from "styled-components";
 import {SectionTitle} from "components/SectionTitle";
 import {Icon} from "components/icon/Icon";
 import {Slider} from "components/slider/Slider";
 import {FlexWrapper} from "components/FlexWrapper";
+import {S} from "./Testimony_Styles"
 
-export const Testimony = () => {
+export const Testimony: React.FC = () => {
     return (
-        <StyledTestimony>
+        <S.Testimony>
             <SectionTitle>Testimony</SectionTitle>
             <FlexWrapper direction={"column"} align={"center"}>
                 <Icon iconId={"quotes"}/>
                 <Slider/>
             </FlexWrapper>
-        </StyledTestimony>
+        </S.Testimony>
     );
 };
-
-const StyledTestimony = styled.section`
-  max-width: 500px;
-  width:100%;
-  margin: 0;
-  flex-shrink: 2;
-  
-  ${SectionTitle} {
-    margin-bottom: 55px;
-  }
-`

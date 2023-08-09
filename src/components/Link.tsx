@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import {theme} from "styles/Theme";
 
-
 export const Link = styled.a`
   display: inline-block;
   font-size: 15px;

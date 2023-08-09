@@ -1,96 +1,32 @@
 import React from 'react';
-import styled from "styled-components";
 import {Logo} from "components/logo/Logo";
 import {SocialsIconList} from "components/socials/Socials";
 import {FlexWrapper} from "components/FlexWrapper";
 import {Container} from "components/Container";
-import {theme} from "styles/Theme";
 import {Link} from "components/Link";
-import {HeaderMenu} from "layout/header/headerMenu/HeaderMenu";
+import {DesktopMenu} from "layout/header/headerMenu/desctopMenu/DesktopMenu";
+import {S} from "./Footer_Styles"
 
 const items = ["Home", "About", "Tech Stack", "Projects", "Contact"];
 
-export const Footer = () => {
+export const Footer: React.FC = () => {
     return (
-        <StyledFooter>
+        <S.Footer>
             <Container>
                 <FlexWrapper direction={"column"} justify={"center"}>
-                    <StyledFooterSection>
+                    <S.FooterSection>
                         <Logo iconId={"logo"}/>
                         <Link href="mailto:ivan.dolgikh1199@gmail.com"
                               title={"mail to Ivan"}>ivan.dolgikh1199@gmail.com</Link>
                         <SocialsIconList/>
-                    </StyledFooterSection>
-                    <StyledFooterSection>
-                        <HeaderMenu menuItems={items}/>
-                        <Copyright>© 2023 Designed and built
-                            by <span>Ivan Dolgikh</span> with <span>Love</span> & <span>Coffee</span></Copyright>
-                    </StyledFooterSection>
+                    </S.FooterSection>
+                    <S.FooterSection>
+                        <DesktopMenu menuItems={items}/>
+                        <S.Copyright>© 2023 Designed and built
+                            by <span>Ivan Dolgikh</span> with <span>Love</span> & <span>Coffee</span></S.Copyright>
+                    </S.FooterSection>
                 </FlexWrapper>
             </Container>
-        </StyledFooter>
+        </S.Footer>
     );
 };
-
-const StyledFooter = styled.footer`
-  padding-bottom: 40px;
-  position: relative;
-
-  &::after {
-    content: "";
-    position: absolute;
-    display: inline-block;
-    max-width: 1220px;
-    width: 100%;
-    height: 1px;
-    background-color: ${theme.colors.lightFont};
-    bottom: 55%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  @media screen and (max-width: 630px) {
-    &::after {
-      bottom: 35%;
-    }
-  }
-
-`
-
-const StyledFooterSection = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 30px 0;
-
-  & a {
-    color: ${theme.colors.titleFont};
-    font-size: 18px;
-  }
-
-  & ${Link} {
-    margin: 0 20px;
-    font-size: 18px;
-    font-weight: 400;
-  }
-
-  &:nth-of-type(1) ${Link} {
-    text-transform: lowercase;
-  }
-
-  @media screen and (max-width: 630px) {
-    flex-direction: column;
-    gap: 20px;
-  }
-`
-
-const Copyright = styled.small`
-  display: block;
-  font-size: 14px;
-
-  & > span {
-    background-image: ${theme.colors.gradient90};
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-`

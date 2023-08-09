@@ -1,39 +1,19 @@
 import React from 'react';
-import styled from "styled-components";
 import {About} from "./about/About";
 import {Experience} from "layout/sections/cvblock/experience/Experience";
 import {Education} from "layout/sections/cvblock/education/Education";
 import {Container} from "components/Container";
-import background from "assets/img/drawing.webp";
-import {theme} from "styles/Theme";
+import {S} from "./CvBlock_Styles"
 
-export const CvBlock = () => {
+
+export const CvBlock:React.FC = () => {
     return (
-        <StyledCvBlock>
+        <S.CvBlock>
             <Container>
                 <About/>
                 <Experience/>
                 <Education/>
             </Container>
-        </StyledCvBlock>
+        </S.CvBlock>
     );
 };
-
-const StyledCvBlock = styled.section`
-  margin-top: 50px;
-  position: relative;
-  
-  &::after {
-    content: "";
-    position: absolute;
-    width: 40%;
-    height: 100%;
-    top: 0;
-    right: 0;
-    z-index: 1;
-    background-image: url(${background});
-    background-position: right;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-`

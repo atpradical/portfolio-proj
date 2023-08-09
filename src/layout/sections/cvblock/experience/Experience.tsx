@@ -1,41 +1,47 @@
 import React from 'react';
-import styled from "styled-components";
 import {SectionTitle} from "components/SectionTitle";
 import {Card} from "components/card/Card";
+import {S} from "./Experience_Styles"
 
-export const Experience = () => {
+const cardData = [
+    {
+        title: "Junior Web Developer",
+        activity: "Full Time",
+        companyName: "Dr. Rajkumar’s Learning App",
+        companyLocation: "Bengaluru",
+        period: "Sep 2021 - Dec 2021"
+    },
+    {
+        title: "Web Development Intern",
+        activity: "Internship",
+        companyName: "IonPixelz Web Solutions",
+        companyLocation: "Bengaluru",
+        period: "Sep 2021 - Dec 2021"
+    },
+    {
+        title: "SEO / SEM Specialist",
+        activity: "Internship",
+        companyName: "HAAPS",
+        companyLocation: "Bengaluru",
+        period: "Sep 2021 - Dec 2021"
+    },
+
+]
+
+export const Experience: React.FC = () => {
     return (
-        <StyledExperience>
+        <S.Experience>
             <SectionTitle>Work Experience</SectionTitle>
-            <Card title={"Junior Web Developer"}
-                  activity={"Full Time"}
-                  companyName={"Dr. Rajkumar’s Learning App"}
-                  companyLocation={"Bengaluru"}
-                  period={"Sep 2021 - Dec 2021"}/>
-            <Card title={"Web Development Intern"}
-                  activity={"Internship"}
-                  companyName={"IonPixelz Web Solutions"}
-                  companyLocation={"Bengaluru"}
-                  period={"Sep 2021 - Dec 2021"}/>
-            <Card title={"SEO / SEM Specialist"}
-                  activity={"Internship"}
-                  companyName={"HAAPS"}
-                  companyLocation={"Bengaluru"}
-                  period={"Sep 2021 - Dec 2021"}/>
-        </StyledExperience>
+
+            {cardData.map((c, index) => {
+                return (
+                    <Card key={index} title={c.title}
+                          activity={c.activity}
+                          companyName={c.companyName}
+                          companyLocation={c.companyLocation}
+                          period={c.period}/>
+                )
+            })}
+        </S.Experience>
     );
 };
-
-const StyledExperience = styled.div`
-  max-width: 710px;
-  padding: 0 10px;
-  
-  & ${SectionTitle} {
-    margin: 40px 0 40px;
-    font-size: 42px;
-    text-align: start;
-
-    &::after {
-      display: none;
-  }
-`

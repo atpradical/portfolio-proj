@@ -6,7 +6,7 @@ type LogoPropsType = {
     iconId?: string
 }
 
-export const Logo = (props: LogoPropsType) => {
+export const Logo:React.FC<LogoPropsType> = (props: LogoPropsType) => {
     return (
         <StyledLogo>
             <Icon iconId={props.iconId} iconWidth={'150px'} iconHeight={'55'} iconViewBox={'50 -25 320 140'}/>

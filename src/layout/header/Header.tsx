@@ -1,47 +1,40 @@
 //rsc(enter)
 import React from 'react';
-import styled from "styled-components";
 import {Logo} from "components/logo/Logo";
-import {SocialsIconList, StyledSocialsList} from "components/socials/Socials";
 import {Container} from "components/Container";
 import {FlexWrapper} from "components/FlexWrapper";
-import {theme} from "styles/Theme";
-import {HeaderMenu} from "layout/header/headerMenu/HeaderMenu";
-import {MobileMenu} from "layout/header/mobileMenu/MobileMenu";
+import {DesktopMenu} from "layout/header/headerMenu/desctopMenu/DesktopMenu";
+import {MobileMenu} from "layout/header/headerMenu/mobileMenu/MobileMenu";
+import {SocialsIconList} from "components/socials/Socials";
+import {S} from "layout/header/Header_Styles" ;
+
 
 const items = ["Home", "About", "Tech Stack", "Projects", "Contact"];
 
-export const Header = () => {
+export const Header: React.FC = () => {
+
+    const [width, setWidth] = React.useState(window.innerWidth);
+    const breakpoint = 1080;
+
+    React.useEffect(() => {
+        const handleWindowResize = () => setWidth(window.innerWidth)
+        window.addEventListener("resize", handleWindowResize);
+
+        return () => window.removeEventListener("resize", handleWindowResize);
+    }, []);
+
     return (
-        <StyledHeader>
+        <S.Header>
             <Container>
                 <FlexWrapper justify={"space-between"} align={"center"}>
                     <Logo iconId={"logo"}/>
-                    <HeaderMenu menuItems={items}/>
-                    <MobileMenu menuItems={items}/>
+
+                    {width < breakpoint ? <MobileMenu menuItems={items}/>
+                        : <DesktopMenu menuItems={items}/>}
+
                     <SocialsIconList/>
                 </FlexWrapper>
             </Container>
-        </StyledHeader>
+        </S.Header>
     );
 };
-
-const StyledHeader = styled.header`
-  background-color: ${theme.colors.primary};
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 99999;
-  
-  & ${StyledSocialsList} {
-    
-    @media ${theme.media.desktopTiny} {
-      margin-right: 70px;
-    }
-    
-    @media screen and (max-width: 380px) {
-        display: none;
-    }
-  }
-`
