@@ -1,5 +1,7 @@
 import styled, {css} from "styled-components";
 import {theme} from "styles/Theme";
+import {font} from "styles/Common";
+import {Link} from "components/Link";
 
 /* Desktop Menu begin */
 const DesktopMenu = styled.nav`
@@ -15,20 +17,21 @@ const DesktopMenu = styled.nav`
 const MobileMenu = styled.nav``
 
 const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
+  width: 20px;
+  height: 20px;
   position: fixed;
   top: 5px;
-  right: 5px;
+  right: calc(100% - 99%);
   z-index: 99999;
-  width: 180px;
-  height: 350px;
-  border-radius: 20px;
   background-image: ${theme.colors.gradientMenuPopup};
+  border-radius: 20px;
   display: none;
 
   ${props => props.isOpen && css<{ isOpen: boolean }>`
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 25vh 49%;
   `}
   
   ul {
@@ -36,7 +39,12 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    width: 100%;
+    
+    & ${Link} {
+      ${font({lineHeight: 1.2 ,Fmax: 28, Fmin: 22})}
+      color: ${theme.colors.primary};
+      white-space: nowrap;
+    }
   }
 `
 
@@ -61,6 +69,7 @@ const BurgerBtn = styled.button<{ isOpen: boolean }>`
     ${props => props.isOpen && css<{ isOpen: boolean }>`
       background-color: transparent;
     `}
+    
     &:before {
       content: "";
       display: block;
@@ -72,6 +81,7 @@ const BurgerBtn = styled.button<{ isOpen: boolean }>`
 
       ${props => props.isOpen && css<{ isOpen: boolean }>`
         transform: rotate(45deg) translateY(0px);
+        background-color: ${theme.colors.primary};
       `}
     }
 
@@ -86,6 +96,7 @@ const BurgerBtn = styled.button<{ isOpen: boolean }>`
 
       ${props => props.isOpen && css<{ isOpen: boolean }>`
         transform: rotate(-45deg) translateY(0px);
+        background-color: ${theme.colors.primary};
         width: 36px;
       `}
     }
