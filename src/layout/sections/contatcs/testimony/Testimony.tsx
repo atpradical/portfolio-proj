@@ -9,7 +9,7 @@ export const Testimony: React.FC = () => {
     return (
         <S.Testimony>
             <SectionTitle>Testimony</SectionTitle>
-            <FlexWrapper direction={"column"} align={"center"}>
+            <FlexWrapper direction={"column"} align={"center"} gap={"20px"}>
                 <Icon iconId={"quotes"}/>
                 <Slider/>
             </FlexWrapper>

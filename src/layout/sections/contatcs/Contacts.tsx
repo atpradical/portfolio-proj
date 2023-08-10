@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from "styled-components";
 import {SectionTitle} from "components/SectionTitle";
 import {SectionText} from "components/SectionText";
 import {Button} from "components/Button";
