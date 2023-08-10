@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import {theme} from "styles/Theme";
+import {font} from "styles/Common";
 
 const Copyright = styled.small`
-  widht: 100%;
   display: block;
+  width: 100%;
   font-size: 14px;
   text-align: center;
 
@@ -11,6 +12,10 @@ const Copyright = styled.small`
     background-image: ${theme.colors.gradient90};
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+
+  @media ${theme.media.mobile} {
+    ${font({lineHeight: 1.2, Fmax: 16, Fmin: 10})};
   }
 `
 

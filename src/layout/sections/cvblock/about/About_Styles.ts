@@ -8,7 +8,6 @@ const About = styled.div`
 
   & ${SectionTitle} {
     margin: 40px 0 40px;
-    font-size: 42px;
     text-align: start;
 
     &::after {

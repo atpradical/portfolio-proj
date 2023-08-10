@@ -60,14 +60,12 @@ const PhotoWrapper = styled.div`
 
     position: absolute;
     z-index: -1;
-    left: -10.5px;
-    top: -10.5px;
+    left: -10px;
+    top: -10px;
 
     @media ${theme.media.mobile} {
-      width: 330px;
-      height: 330px;
-      left: -9.5px;
-      top: -9.5px;
+      width: 300px;
+      height: 300px;
     }
   }
 
@@ -86,8 +84,8 @@ const Photo = styled.img`
   filter: grayscale(90%);
 
   @media ${theme.media.mobile} {
-    width: 310px;
-    height: 310px;
+    width: 280px;
+    height: 280px;
   }
 `
 

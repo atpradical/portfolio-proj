@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import {theme} from "styles/Theme";
 import {Link} from "components/Link";
+import {font} from "styles/Common";
 
 const Footer = styled.footer`
-  padding-bottom: 20px;
+  padding-bottom: 25px;
   position: relative;
 
   &::after {
@@ -14,15 +15,14 @@ const Footer = styled.footer`
     width: 100%;
     height: 1px;
     background-color: ${theme.colors.lightFont};
-    bottom: 30%;
+    bottom: 60px;
     left: 50%;
     transform: translateX(-50%);
   }
 
   @media ${theme.media.tablet} {
     &::after {
-      width: 70%;
-      bottom: 20%;
+      width: 70%; 
     }
   }
 `
@@ -40,8 +40,8 @@ const FooterSection = styled.div`
 
   & ${Link} {
     margin: 0;
-    font-size: 18px;
-    font-weight: 400;
+    ${font({weight: 400, lineHeight: 1.2, Fmax: 18, Fmin: 14})};
+    color: ${theme.colors.titleFont};
   }
 
   &:nth-of-type(1) ${Link} {

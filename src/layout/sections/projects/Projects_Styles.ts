@@ -5,17 +5,13 @@ import {Link} from "components/Link";
 import linkChain from "assets/img/prog-img/proj-link-chain.svg";
 import gitHub from "assets/img/prog-img/proj-github.svg";
 import {Button} from "components/Button";
+import {font} from "styles/Common";
 
 const Projects = styled.section`
 
   @media ${theme.media.tablet} {
     & ${FlexWrapper} {
       padding: 0 100px;
-    }
-  }
-
-  @media ${theme.media.tablet} {
-    & ${FlexWrapper} {
       padding: 0;
     }
   }
@@ -27,51 +23,8 @@ const Project = styled.div`
   border-radius: 20px;
   box-shadow: 2px 2px 100px 0 rgba(0, 0, 0, 0.20);
 
-  ${Link} ~ ${Link} {
-    margin-left: 40px;
-  }
-
-  ${Link}:nth-of-type(1)::before {
-    content: "";
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    background-image: url(${linkChain});
-    position: relative;
-    left: -10px;
-    top: 4px;
-  }
-
-  ${Link}:nth-of-type(1)::after {
-    left: 30px;
-  }
-
-  ${Link}:nth-of-type(2)::before {
-    content: "";
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    background-image: url(${gitHub});
-    position: relative;
-    left: -10px;
-    top: 4px;
-  }
-
-  ${Link}:nth-of-type(2)::after {
-    left: 30px;
-  }
-
   @media screen and (max-width: 1200px) {
     flex-grow: 1;
-  }
-
-  @media ${theme.media.mobile} {
-    max-width: 300px;
-    width: 100%;
-
-    ${Link} ~ ${Link} {
-      margin-left: 0;
-    }
   }
 `
 
@@ -115,9 +68,9 @@ const ImageWrapper = styled.div`
   }
 
   @media ${theme.media.tablet} {
-      &::before {
-        opacity: 1;
-      }
+    &::before {
+      opacity: 1;
+    }
 
     ${Button} {
       opacity: 1;
@@ -132,25 +85,70 @@ const Image = styled.img`
   border-radius: 20px 20px 0 0;
 `
 
-const Description = styled.div`
+const CardDescription = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 20px;
   padding: 0 30px 25px;
 `
 
-const Title = styled.h3`
-  margin-top: 12px;
-  color: ${theme.colors.cardTitleFont};
-  text-align: center;
-  font-size: 28px;
-  font-weight: 500;
-  line-height: 1;
+const LinksBlock = styled.div`
+  
+  flex-direction: row;
+
+  ${Link} ~ ${Link} {
+    margin-left: 20px;
+  }
+
+  ${Link}:nth-of-type(1)::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url(${linkChain});
+    position: relative;
+    left: -10px;
+    top: 4px;
+  }
+
+  ${Link}:nth-of-type(1)::after {
+    left: 30px;
+  }
+
+  ${Link}:nth-of-type(2)::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url(${gitHub});
+    position: relative;
+    left: -10px;
+    top: 4px;
+  }
+
+  ${Link}:nth-of-type(2)::after {
+    left: 30px;
+  }
 
   @media ${theme.media.mobile} {
-    font-size: 22px;
+    ${Link} ~ ${Link} {
+      margin-left: 0;
+    }
   }
 `
 
+const Title = styled.h3`
+  margin-top: 10px;
+  ${font({lineHeight: 1.2, weight: 500, Fmax: 28, Fmin: 22})}
+  color: ${theme.colors.cardTitleFont};
+  font-style: normal;
+  text-align: center;
+`
+
 const Text = styled.p`
-  margin: 17px 0 12px;
+  ${font({lineHeight: 1.2, weight: 300, Fmax: 18, Fmin: 14})}
+  font-style: normal;
   color: ${theme.colors.normalFont};
 `
 
@@ -159,7 +157,8 @@ export const S = {
     Project,
     ImageWrapper,
     Image,
-    Description,
+    CardDescription,
+    LinksBlock,
     Title,
     Text
 }

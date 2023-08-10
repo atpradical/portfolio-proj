@@ -16,12 +16,14 @@ export const Project: React.FC<ProjectPropsType> = (props: ProjectPropsType) => 
                 <S.Image src={props.src} alt=""/>
                 <Button>View Project</Button>
             </S.ImageWrapper>
-            <S.Description>
+            <S.CardDescription>
                 <S.Title>{props.title}</S.Title>
                 <S.Text>{props.text}</S.Text>
-                <Link href={"#"}>Live Preview</Link>
-                <Link href={"#"}>View Code</Link>
-            </S.Description>
+                <S.LinksBlock>
+                    <Link href={"#"}>Live Preview</Link>
+                    <Link href={"#"}>View Code</Link>
+                </S.LinksBlock>
+            </S.CardDescription>
         </S.Project>
     );
 };
