@@ -14,6 +14,10 @@ const MainTitle = styled.h1`
   font-style: normal;
   line-height: 1.4;
   letter-spacing: -1px;
+  
+  p {
+    display: none;
+  }
 
   @media ${theme.media.mobile} {
     white-space: nowrap;
