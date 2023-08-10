@@ -4,6 +4,7 @@ import {FlexWrapper} from "components/FlexWrapper";
 import {Container} from "components/Container";
 import {S} from "layout/sections/main/Main_Styles";
 import Typewriter from 'typewriter-effect';
+import Tilt from 'react-parallax-tilt';
 
 export const Main: React.FC = () => {
     return (
@@ -21,14 +22,21 @@ export const Main: React.FC = () => {
                                 strings: ['A Web Developer', 'A Frontend Developer'],
                                 autoStart: true,
                                 loop: true,
-                                delay: 100,
+                                delay: 150,
                             }}
                             />
                         </S.MainTitle>
                     </div>
-                    <S.PhotoWrapper>
-                        <S.Photo src={photo} alt="portrait of Ivan Dolgikh"/>
-                    </S.PhotoWrapper>
+                    <Tilt className="parallax-effect-glare-scale"
+                          perspective={500}
+                          glareEnable={true}
+                          glareMaxOpacity={0.45}
+                          scale={1.02}>
+                        <S.PhotoWrapper>
+                            <S.Photo src={photo} alt="portrait of Ivan Dolgikh"/>
+                        </S.PhotoWrapper>
+                    </Tilt>
+
                 </FlexWrapper>
             </Container>
         </S.Main>
