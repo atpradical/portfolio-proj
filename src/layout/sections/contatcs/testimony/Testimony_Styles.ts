@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {SectionTitle} from "components/SectionTitle";
+import {theme} from "styles/Theme";
 
 const Testimony = styled.section`
   max-width: 500px;

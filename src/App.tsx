@@ -6,11 +6,13 @@ import {TechStack} from "layout/sections/techstack/TechStack";
 import {Projects} from "layout/sections/projects/Projects";
 import {Contacts} from "layout/sections/contatcs/Contacts";
 import {Footer} from "layout/footer/Footer";
+import {Particle} from "components/particle/Particle";
 
 
 function App() {
     return (
         <div className="App">
+            <Particle/>
             <Header/>
             <Main/>
             <CvBlock/>

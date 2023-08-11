@@ -17,10 +17,10 @@ export const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-style: normal;
-    
+
     min-width: 300px;
   }
-  
+
   a {
     text-decoration: none;
     color: ${theme.colors.normalFont};
@@ -44,19 +44,19 @@ export const GlobalStyle = createGlobalStyle`
 
   section {
     background-color: ${theme.colors.primary};
-    margin: 100px 0;
-    
+    padding: 100px 0;
+
     @media ${theme.media.mobile} {
-      margin: 50px 0;
+      padding: 30px 0;
     }
   }
-  
+
   h3 {
     color: ${theme.colors.cardTitleFont};
     font-size: 20px;
     font-weight: 400;
   }
-  
+
   p {
     color: ${theme.colors.lightFont};
     font-size: 18px;

@@ -4,8 +4,9 @@ import {Link} from "components/Link";
 import {font} from "styles/Common";
 
 const Footer = styled.footer`
-  padding-bottom: 25px;
   position: relative;
+  padding-bottom: 25px;
+  background-color: ${theme.colors.primary};
 
   &::after {
     content: "";

@@ -3,6 +3,7 @@ import background from "assets/img/drawing.webp";
 import {theme} from "styles/Theme";
 
 const CvBlock = styled.section`
+  position: relative;
   margin: 0;
   padding: 130px 0;
   background-image: url(${background});

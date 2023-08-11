@@ -8,6 +8,7 @@ import {Button} from "components/Button";
 import {font} from "styles/Common";
 
 const Projects = styled.section`
+  position: relative;
 
   @media ${theme.media.tablet} {
     & ${FlexWrapper} {

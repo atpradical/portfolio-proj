@@ -16,6 +16,8 @@ const Slide = styled.div`
   text-align: center;
   margin: 20px 0;
   border-radius: 20px;
+position: relative;
+  z-index: 1;
 `
 
 const Name = styled.span`
