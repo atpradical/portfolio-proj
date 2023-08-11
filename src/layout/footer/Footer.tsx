@@ -7,7 +7,6 @@ import {SL} from "components/Link"
 import {S} from "./Footer_Styles"
 import {Copyright} from "components/copyright/Copyright";
 
-
 export const Footer: React.FC = () => {
     return (
         <S.Footer>
