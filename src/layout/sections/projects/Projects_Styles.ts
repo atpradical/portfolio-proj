@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {theme} from "styles/Theme";
 import {FlexWrapper} from "components/FlexWrapper";
-import {Link} from "components/Link";
+import {MenuLink} from "layout/header/headerMenu/menu/MenuLink";
 import linkChain from "assets/img/prog-img/proj-link-chain.svg";
 import gitHub from "assets/img/prog-img/proj-github.svg";
 import {Button} from "components/Button";
@@ -98,11 +98,11 @@ const LinksBlock = styled.div`
   
   flex-direction: row;
 
-  ${Link} ~ ${Link} {
+  ${MenuLink} ~ ${MenuLink} {
     margin-left: 20px;
   }
 
-  ${Link}:nth-of-type(1)::before {
+  ${MenuLink}:nth-of-type(1)::before {
     content: "";
     display: inline-block;
     width: 20px;
@@ -113,11 +113,11 @@ const LinksBlock = styled.div`
     top: 4px;
   }
 
-  ${Link}:nth-of-type(1)::after {
+  ${MenuLink}:nth-of-type(1)::after {
     left: 30px;
   }
 
-  ${Link}:nth-of-type(2)::before {
+  ${MenuLink}:nth-of-type(2)::before {
     content: "";
     display: inline-block;
     width: 20px;
@@ -128,12 +128,12 @@ const LinksBlock = styled.div`
     top: 4px;
   }
 
-  ${Link}:nth-of-type(2)::after {
+  ${MenuLink}:nth-of-type(2)::after {
     left: 30px;
   }
 
   @media ${theme.media.mobile} {
-    ${Link} ~ ${Link} {
+    ${MenuLink} ~ ${MenuLink} {
       margin-left: 0;
     }
   }

@@ -1,8 +1,9 @@
 import styled, {css} from "styled-components";
 import {theme} from "styles/Theme";
 import {font} from "styles/Common";
+import {Link} from "react-scroll";
 
-export const Link = styled.a<{ active?: boolean }>`
+export const MenuLink = styled(Link)<{ active?: boolean }>`
   display: inline-block;
   padding: 10px;
   position: relative;
@@ -14,9 +15,14 @@ export const Link = styled.a<{ active?: boolean }>`
     color: ${theme.colors.titleFont};
     font-weight: 700;
   `}
-  &:hover {
+  
+  &:hover,
+  &.active {
+    cursor: pointer;
+    color: ${theme.colors.titleFont};
+    font-weight: 700px;
+    
     &::after {
-      cursor: pointer;
       height: 1px;
     }
   }

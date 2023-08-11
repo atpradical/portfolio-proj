@@ -6,10 +6,36 @@ import {FlexWrapper} from "components/FlexWrapper";
 import {DesktopMenu} from "layout/header/headerMenu/desctopMenu/DesktopMenu";
 import {MobileMenu} from "layout/header/headerMenu/mobileMenu/MobileMenu";
 import {SocialsIconList} from "components/socials/Socials";
-import {S} from "layout/header/Header_Styles" ;
+import {S} from "layout/header/Header_Styles" ;;
 
+export type MenuItemType = {
+    title: string
+    href: string
+}
 
-const items = ["Home", "About", "Tech Stack", "Projects", "Contact"];
+const menuItems = [
+    {
+        title: "Home",
+        href: "main",
+    },
+    {
+        title: "About",
+        href: "cvblock",
+    },
+    {
+        title: "Tech Stack",
+        href: "techstack",
+    },
+    {
+        title: "Projects",
+        href: "projects",
+    },
+    {
+        title: "Contact",
+        href: "contacts",
+    }
+
+];
 
 export const Header: React.FC = () => {
 
@@ -29,8 +55,8 @@ export const Header: React.FC = () => {
                 <FlexWrapper justify={"space-between"} align={"center"}>
                     <Logo iconId={"logo"}/>
 
-                    {width < breakpoint ? <MobileMenu menuItems={items}/>
-                        : <DesktopMenu menuItems={items}/>}
+                    { width < breakpoint ? <MobileMenu  menuItems={menuItems}/>
+                            : <DesktopMenu menuItems={menuItems}/> }
 
                     <SocialsIconList/>
                 </FlexWrapper>

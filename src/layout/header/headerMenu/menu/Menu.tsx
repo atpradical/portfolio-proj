@@ -1,14 +1,19 @@
 import React from 'react';
-import {Link} from "components/Link";
+import {MenuLink} from "layout/header/headerMenu/menu/MenuLink";
 import styled from "styled-components";
+import {MenuItemType} from "layout/header/Header";
 
-export const Menu: React.FC<{ menuItems: Array<string> }> = (props: { menuItems: Array<string> }) => {
+type DesktopMenuPropsType = {
+    menuItems: MenuItemType[]
+}
+
+export const Menu: React.FC<DesktopMenuPropsType> = (props: DesktopMenuPropsType) => {
     return (
         <ul>
-            {props.menuItems.map((item, index) => {
+            {props.menuItems.map((i, index) => {
                 return (
                     <ListItem key={index}>
-                        <Link href="#">{item}</Link>
+                        <MenuLink activeClass="active" offset={-50} smooth={true} to={i.href}>{i.title}</MenuLink>
                     </ListItem>
                 )
             })}
@@ -18,7 +23,7 @@ export const Menu: React.FC<{ menuItems: Array<string> }> = (props: { menuItems:
 
 export const ListItem = styled.li`
 
-  ${Link} {
+  ${MenuLink} {
     text-align: center;
     font-family: DM Sans, sans-serif;
     font-size: 20px;

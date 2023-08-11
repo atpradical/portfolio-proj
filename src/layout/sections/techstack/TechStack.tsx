@@ -95,7 +95,7 @@ const SkillData = [
 
 export const TechStack:React.FC = () => {
     return (
-        <S.TechStack>
+        <S.TechStack id={"techstack"}>
             <Container>
                 <SectionTitle>My Tech Stack</SectionTitle>
                 <SectionText>Technologies I’ve been working with recently</SectionText>

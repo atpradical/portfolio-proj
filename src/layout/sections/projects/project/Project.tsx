@@ -1,7 +1,7 @@
 import React from 'react';
-import {Link} from "components/Link";
 import {Button} from "components/Button";
 import {S} from "layout/sections/projects/Projects_Styles"
+import {SL} from "components/Link"
 
 type ProjectPropsType = {
     src: string;
@@ -20,8 +20,8 @@ export const Project: React.FC<ProjectPropsType> = (props: ProjectPropsType) => 
                 <S.Title>{props.title}</S.Title>
                 <S.Text>{props.text}</S.Text>
                 <S.LinksBlock>
-                    <Link href={"#"}>Live Preview</Link>
-                    <Link href={"#"}>View Code</Link>
+                    <SL.Link href={"#"}>Live Preview</SL.Link>
+                    <SL.Link href={"#"}>View Code</SL.Link>
                 </S.LinksBlock>
             </S.CardDescription>
         </S.Project>

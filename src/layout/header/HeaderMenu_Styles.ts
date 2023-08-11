@@ -1,7 +1,7 @@
 import styled, {css} from "styled-components";
 import {theme} from "styles/Theme";
 import {font} from "styles/Common";
-import {Link} from "components/Link";
+import {MenuLink} from "layout/header/headerMenu/menu/MenuLink";
 
 /* Desktop Menu begin */
 const DesktopMenu = styled.nav`
@@ -40,7 +40,7 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
     flex-direction: column;
     text-align: center;
     
-    & ${Link} {
+    & ${MenuLink} {
       ${font({lineHeight: 1.2 ,Fmax: 28, Fmin: 22})}
       color: ${theme.colors.primary};
       white-space: nowrap;

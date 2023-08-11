@@ -10,7 +10,7 @@ import {S} from "./Contacts_Styles"
 
 export const Contacts: React.FC = () => {
     return (
-        <S.Contacts>
+        <S.Contacts id={"contacts"}>
             <Container>
                 <FlexWrapper justify={"space-around"} gap={"100px"}>
                     <Testimony/>

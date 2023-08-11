@@ -8,7 +8,7 @@ import {S} from "./CvBlock_Styles"
 
 export const CvBlock:React.FC = () => {
     return (
-        <S.CvBlock>
+        <S.CvBlock id={"cvblock"}>
             <Container>
                 <About/>
                 <Experience/>

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {theme} from "styles/Theme";
-import {Link} from "components/Link";
+import {MenuLink} from "layout/header/headerMenu/menu/MenuLink";
 import {font} from "styles/Common";
 
 const Footer = styled.footer`
@@ -39,13 +39,13 @@ const FooterSection = styled.div`
     font-size: 18px;
   }
 
-  & ${Link} {
+  & ${MenuLink} {
     margin: 0;
     ${font({weight: 400, lineHeight: 1.2, Fmax: 18, Fmin: 14})};
     color: ${theme.colors.titleFont};
   }
 
-  &:nth-of-type(1) ${Link} {
+  &:nth-of-type(1) ${MenuLink} {
     text-transform: lowercase;
   }
 

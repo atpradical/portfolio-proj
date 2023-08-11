@@ -8,18 +8,17 @@ import Tilt from 'react-parallax-tilt';
 
 export const Main: React.FC = () => {
     return (
-        <S.Main>
+        <S.Main id={"main"}>
             <Container>
                 <FlexWrapper align={"center"} justify={"space-around"} wrap={"wrap"}>
                     <div>
                         <S.TitleText>Hi 👋,</S.TitleText>
                         <S.TitleText>My name is</S.TitleText>
                         <S.Name>Ivan Dolgikh</S.Name>
-                        {/*<S.MainTitle>A Web Developer</S.MainTitle>*/}
                         <S.MainTitle>
                             <p>A Web and Frontend Developer</p>
                             <Typewriter options={{
-                                strings: ['A Web Developer', 'A Frontend Developer'],
+                                strings: ['A Web Developer', 'A Front Developer'],
                                 autoStart: true,
                                 loop: true,
                                 delay: 150,
@@ -36,7 +35,6 @@ export const Main: React.FC = () => {
                             <S.Photo src={photo} alt="portrait of Ivan Dolgikh"/>
                         </S.PhotoWrapper>
                     </Tilt>
-
                 </FlexWrapper>
             </Container>
         </S.Main>

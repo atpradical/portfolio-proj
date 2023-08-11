@@ -3,13 +3,13 @@ import {theme} from "styles/Theme";
 import {font} from "styles/Common";
 
 const Main = styled.section`
-  min-height: 80vh;
+  min-height: 100vh;
   display: flex;
-  margin: 100px 0 70px;
+  padding: 150px 0 100px;
 `
 
 const MainTitle = styled.h1`
-  ${font({family: "Poppins", weight: 700, Fmax: 58, Fmin: 32})}
+  ${font({family: "Poppins", weight: 700, Fmax: 54, Fmin: 30})}
   color: ${theme.colors.titleFont};
   font-style: normal;
   line-height: 1.4;
@@ -25,7 +25,7 @@ const MainTitle = styled.h1`
 `
 
 const TitleText = styled.h2`
-  ${font({family: "Poppins", weight: 700, Fmax: 58, Fmin: 32})}
+  ${font({family: "Poppins", weight: 700, Fmax: 54, Fmin: 30})}
   color: ${theme.colors.titleFont};
   font-style: normal;
   line-height: 1.4;
@@ -37,7 +37,7 @@ const TitleText = styled.h2`
 `
 
 const Name = styled.h2`
-  ${font({family: "Poppins", weight: 700, Fmax: 58, Fmin: 32})}
+  ${font({family: "Poppins", weight: 700, Fmax: 56, Fmin: 32})}
   font-style: normal;
   line-height: 1.4;
   letter-spacing: -1px;

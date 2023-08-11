@@ -3,7 +3,7 @@ import {Logo} from "components/logo/Logo";
 import {SocialsIconList} from "components/socials/Socials";
 import {FlexWrapper} from "components/FlexWrapper";
 import {Container} from "components/Container";
-import {Link} from "components/Link";
+import {SL} from "components/Link"
 import {S} from "./Footer_Styles"
 import {Copyright} from "components/copyright/Copyright";
 
@@ -15,8 +15,8 @@ export const Footer: React.FC = () => {
                 <FlexWrapper direction={"column"} justify={"center"}>
                     <S.FooterSection>
                         <Logo iconId={"logo"}/>
-                        <Link href="mailto:ivan.dolgikh1199@gmail.com"
-                              title={"mail to Ivan"}>ivan.dolgikh1199@gmail.com</Link>
+                        <SL.Link href="mailto:ivan.dolgikh1199@gmail.com"
+                                  title={"mail to Ivan"}>ivan.dolgikh1199@gmail.com</SL.Link>
                         <SocialsIconList/>
                     </S.FooterSection>
                     <Copyright/>
