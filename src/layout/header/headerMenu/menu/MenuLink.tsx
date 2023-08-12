@@ -7,37 +7,19 @@ export const MenuLink = styled(Link)<{ active?: boolean }>`
   display: inline-block;
   padding: 10px;
   position: relative;
-  ${font({weight: 300, lineHeight: 1.2, Fmax: 15, Fmin: 12})};
+  ${font({family: "DM Sans, sans-serif", weight: 500, lineHeight: 1.2, Fmax: 20, Fmin: 12})};
   font-style: normal;
   text-transform: capitalize;
+  transition: ${theme.animation.transition2};
 
-  ${props => props.active && css<{ active?: boolean }>`
-    color: ${theme.colors.titleFont};
-    font-weight: 700;
+  ${props => props.activeClass && css<{ active?: boolean }>`
+
   `}
   
-  &:hover,
-  &.active {
+  &:hover, &.active {
     cursor: pointer;
+    text-shadow: 0 -5px 10px #13B0F5, 0 5px 10px #E70FAA;
     color: ${theme.colors.titleFont};
-    font-weight: 700px;
-    
-    &::after {
-      height: 1px;
-    }
-  }
-
-  &::after {
-    content: "";
-    display: inline-block;
-    position: absolute;
-    bottom: 5px;
-    left: 10px;
-    right: 10px;
-    background-color: ${theme.colors.titleFont};
-
-    ${props => props.active && css<{ active?: boolean }>`
-      height: 1px;
-    `}
+    font-weight: 700;
   }
 `

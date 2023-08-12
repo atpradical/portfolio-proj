@@ -38,42 +38,54 @@ const projectData = [
         title: "Project Tile goes here",
         src: projectImg1,
         text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
-        type: "spa"
+        type: "spa",
+        hrefProj: "",
+        hrefGit: ""
     },
 
     {
         title: "Project Tile goes here",
         src: projectImg2,
         text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
-        type: "react"
+        type: "react",
+        hrefProj: "",
+        hrefGit: ""
     },
 
     {
         title: "Project Tile goes here",
         src: projectImg3,
         text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
-        type: "landing"
+        type: "landing",
+        hrefProj: "",
+        hrefGit: ""
     },
 
     {
         title: "Project Tile goes here",
         src: projectImg4,
         text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
-        type: "spa"
+        type: "spa",
+        hrefProj: "",
+        hrefGit: ""
     },
 
     {
         title: "Project Tile goes here",
         src: projectImg5,
         text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
-        type: "react"
+        type: "react",
+        hrefProj: "",
+        hrefGit: ""
     },
 
     {
         title: "Project Tile goes here",
         src: projectImg6,
         text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
-        type: "landing"
+        type: "landing",
+        hrefProj: "",
+        hrefGit: ""
     }
 ]
 
@@ -103,11 +115,13 @@ export const Projects: React.FC = () => {
             <Container>
                 <SectionTitle>Projects</SectionTitle>
                 <SectionText>Things I’ve built so far</SectionText>
-                <TabMenu tabsItems={tabsItems} changeFilterStatus={changeFilterStatus} currentFilterStatus={currentFilterStatus}/>
+                <TabMenu tabsItems={tabsItems} changeFilterStatus={changeFilterStatus}
+                         currentFilterStatus={currentFilterStatus}/>
                 <FlexWrapper wrap={"wrap"} justify={"space-around"} align={"flex-start"} gap={"45px"}>
 
                     {filteredProjects.map((p, index) => {
-                        return <Project key={index} title={p.title} src={p.src} text={p.text}/>
+                        return <Project key={index} title={p.title} src={p.src} text={p.text} hrefProj={p.hrefProj}
+                                        hrefGit={p.hrefGit}/>
                     })}
 
                 </FlexWrapper>

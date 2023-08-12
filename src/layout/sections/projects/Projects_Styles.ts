@@ -1,9 +1,6 @@
 import styled from "styled-components";
 import {theme} from "styles/Theme";
 import {FlexWrapper} from "components/FlexWrapper";
-import {MenuLink} from "layout/header/headerMenu/menu/MenuLink";
-import linkChain from "assets/img/prog-img/proj-link-chain.svg";
-import gitHub from "assets/img/prog-img/proj-github.svg";
 import {Button} from "components/Button";
 import {font} from "styles/Common";
 
@@ -41,8 +38,9 @@ const ImageWrapper = styled.div`
     bottom: 0;
     border-radius: 20px 20px 0 0;
     background: rgba(0, 0, 0, .3);
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(5px);
     opacity: 0;
+    transition: ${theme.animation.transition2};
   }
 
   &:hover {
@@ -52,20 +50,23 @@ const ImageWrapper = styled.div`
 
     ${Button} {
       opacity: 1;
+      transform: translate(-50%, -50%);
     }
   }
 
   ${Button} {
-    opacity: 0;
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -40%);
     width: auto;
     height: auto;
     padding: 10px;
+    color: ${theme.colors.primary};
     border: none;
     background-color: transparent;
+    opacity: 0;
+    transition: ${theme.animation.transition2};
   }
 
   @media ${theme.media.tablet} {
@@ -95,48 +96,7 @@ const CardDescription = styled.div`
 `
 
 const LinksBlock = styled.div`
-  
-  flex-direction: row;
-
-  ${MenuLink} ~ ${MenuLink} {
-    margin-left: 20px;
-  }
-
-  ${MenuLink}:nth-of-type(1)::before {
-    content: "";
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    background-image: url(${linkChain});
-    position: relative;
-    left: -10px;
-    top: 4px;
-  }
-
-  ${MenuLink}:nth-of-type(1)::after {
-    left: 30px;
-  }
-
-  ${MenuLink}:nth-of-type(2)::before {
-    content: "";
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    background-image: url(${gitHub});
-    position: relative;
-    left: -10px;
-    top: 4px;
-  }
-
-  ${MenuLink}:nth-of-type(2)::after {
-    left: 30px;
-  }
-
-  @media ${theme.media.mobile} {
-    ${MenuLink} ~ ${MenuLink} {
-      margin-left: 0;
-    }
-  }
+     flex-direction: row;
 `
 
 const Title = styled.h3`

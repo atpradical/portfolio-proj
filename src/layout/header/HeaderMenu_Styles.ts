@@ -20,32 +20,40 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
   width: 20px;
   height: 20px;
   position: fixed;
-  top: 5px;
-  right: calc(100% - 99%);
-  z-index: 99999;
+  padding: 0;
+  top: -10vh;
+  right: 2%;
+  z-index: -99999;
   background-image: ${theme.colors.gradientMenuPopup};
   border-radius: 20px;
-  display: none;
-
-  ${props => props.isOpen && css<{ isOpen: boolean }>`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 25vh 49%;
-  `}
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: ${theme.animation.transition5};
   
   ul {
     display: flex;
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    
+
     & ${MenuLink} {
-      ${font({lineHeight: 1.2 ,Fmax: 28, Fmin: 22})}
+      ${font({lineHeight: 1.2, Fmax: 28, Fmin: 22})}
       color: ${theme.colors.primary};
       white-space: nowrap;
+
+      &:hover {
+        color: ${theme.colors.titleFont};
+      }
     }
   }
+
+  ${props => props.isOpen && css<{ isOpen: boolean }>`
+    top: 5px;
+    right: calc(100% - 99%);
+    z-index: 99999;
+    padding: 25vh 49%;
+  `}
 `
 
 const BurgerBtn = styled.button<{ isOpen: boolean }>`
@@ -69,7 +77,6 @@ const BurgerBtn = styled.button<{ isOpen: boolean }>`
     ${props => props.isOpen && css<{ isOpen: boolean }>`
       background-color: transparent;
     `}
-    
     &:before {
       content: "";
       display: block;
@@ -78,6 +85,7 @@ const BurgerBtn = styled.button<{ isOpen: boolean }>`
       background-color: ${theme.colors.normalFont};
       position: absolute;
       transform: translateY(-10px);
+      transition: ${theme.animation.transition5};
 
       ${props => props.isOpen && css<{ isOpen: boolean }>`
         transform: rotate(45deg) translateY(0px);
@@ -93,6 +101,7 @@ const BurgerBtn = styled.button<{ isOpen: boolean }>`
       background-color: ${theme.colors.normalFont};
       position: absolute;
       transform: translateY(10px);
+      transition: ${theme.animation.transition5};
 
       ${props => props.isOpen && css<{ isOpen: boolean }>`
         transform: rotate(-45deg) translateY(0px);

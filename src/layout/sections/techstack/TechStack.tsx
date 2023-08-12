@@ -5,6 +5,7 @@ import {SectionText} from "components/SectionText";
 import {Skill} from "./skill/Skill";
 import {Container} from "components/Container";
 import {S} from "layout/sections/techstack/TechStackl_Styles"
+import {Fade} from "react-awesome-reveal";
 
 const SkillData = [
 
@@ -93,19 +94,20 @@ const SkillData = [
     }
 ]
 
-export const TechStack:React.FC = () => {
+export const TechStack: React.FC = () => {
     return (
         <S.TechStack id={"techstack"}>
             <Container>
                 <SectionTitle>My Tech Stack</SectionTitle>
                 <SectionText>Technologies I’ve been working with recently</SectionText>
                 <FlexWrapper wrap={"wrap"} justify={"space-around"} gap={"20px"}>
-
-                    {SkillData.map((s, index) => {
-                        return <Skill iconId={s.iconId} key={index}
-                                      iconWidth={s.iconWidth} iconHeight={s.iconHeight} iconViewBox={s.iconViewBox}/>
-                    })}
-                    
+                    <Fade cascade={true} damping={0.2}>
+                        {SkillData.map((s, index) => {
+                            return <Skill iconId={s.iconId} key={index}
+                                          iconWidth={s.iconWidth} iconHeight={s.iconHeight}
+                                          iconViewBox={s.iconViewBox}/>
+                        })}
+                    </Fade>
                 </FlexWrapper>
             </Container>
         </S.TechStack>

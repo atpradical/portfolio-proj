@@ -13,7 +13,9 @@ const Link = styled.a<{ active?: boolean }>`
   ${props => props.active && css<{ active?: boolean }>`
     color: ${theme.colors.titleFont};
     font-weight: 700;
+    transition: ${theme.animation.transition2};
   `}
+  
   &:hover {
     &::after {
       cursor: pointer;
@@ -25,10 +27,12 @@ const Link = styled.a<{ active?: boolean }>`
     content: "";
     display: inline-block;
     position: absolute;
+    height: 0;
     bottom: 5px;
     left: 10px;
     right: 10px;
     background-color: ${theme.colors.titleFont};
+    transition: ${theme.animation.transition1};
 
     ${props => props.active && css<{ active?: boolean }>`
       height: 1px;

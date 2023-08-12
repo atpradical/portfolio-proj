@@ -13,7 +13,7 @@ export const Menu: React.FC<DesktopMenuPropsType> = (props: DesktopMenuPropsType
             {props.menuItems.map((i, index) => {
                 return (
                     <ListItem key={index}>
-                        <MenuLink activeClass="active" offset={-50} smooth={true} to={i.href}>{i.title}</MenuLink>
+                        <MenuLink activeClass="active" offset={-25} smooth={true} to={i.href}>{i.title}</MenuLink>
                     </ListItem>
                 )
             })}
@@ -21,13 +21,4 @@ export const Menu: React.FC<DesktopMenuPropsType> = (props: DesktopMenuPropsType
     );
 };
 
-export const ListItem = styled.li`
-
-  ${MenuLink} {
-    text-align: center;
-    font-family: DM Sans, sans-serif;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 26px;
-  }
-`
+export const ListItem = styled.li``
