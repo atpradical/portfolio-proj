@@ -65,21 +65,21 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
 
 const BurgerBtn = styled.button<{ isOpen: boolean }>`
   position: fixed;
-  top: 30px;
-  right: 45px;
+  top: 5px;
+  right: 20px;
   width: 50px;
   height: 50px;
-  display: hidden;
-  z-index: 9999999;
+  display: block;
   border: none;
+  z-index: 9999999;
 
   span {
     width: 36px;
     height: 2px;
     background-color: ${theme.colors.normalFont};
     position: absolute;
-    left: 40px;
-    bottom: 50px;
+    left: 5px;
+    bottom: 25px;
 
     ${props => props.isOpen && css<{ isOpen: boolean }>`
       background-color: transparent;
