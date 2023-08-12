@@ -12,6 +12,7 @@ import {Container} from "components/Container";
 import {SectionText} from "components/SectionText";
 import {TabMenu, TabsStatusType} from "layout/sections/projects/tabMenu/TabMenu";
 import {S} from "layout/sections/projects/Projects_Styles"
+import {AnimatePresence, motion} from "framer-motion";
 
 const tabsItems: Array<{ status: TabsStatusType, title: string }> = [
     {
@@ -35,6 +36,7 @@ const tabsItems: Array<{ status: TabsStatusType, title: string }> = [
 
 const projectData = [
     {
+        id: 1,
         title: "Project Tile goes here",
         src: projectImg1,
         text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
@@ -44,6 +46,7 @@ const projectData = [
     },
 
     {
+        id: 2,
         title: "Project Tile goes here",
         src: projectImg2,
         text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
@@ -53,6 +56,7 @@ const projectData = [
     },
 
     {
+        id: 3,
         title: "Project Tile goes here",
         src: projectImg3,
         text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
@@ -62,6 +66,7 @@ const projectData = [
     },
 
     {
+        id: 4,
         title: "Project Tile goes here",
         src: projectImg4,
         text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
@@ -71,6 +76,7 @@ const projectData = [
     },
 
     {
+        id: 5,
         title: "Project Tile goes here",
         src: projectImg5,
         text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
@@ -80,6 +86,7 @@ const projectData = [
     },
 
     {
+        id: 6,
         title: "Project Tile goes here",
         src: projectImg6,
         text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
@@ -118,12 +125,21 @@ export const Projects: React.FC = () => {
                 <TabMenu tabsItems={tabsItems} changeFilterStatus={changeFilterStatus}
                          currentFilterStatus={currentFilterStatus}/>
                 <FlexWrapper wrap={"wrap"} justify={"space-around"} align={"flex-start"} gap={"45px"}>
+                    <AnimatePresence>
+                        {filteredProjects.map((p) => {
+                            return (
+                                <motion.div layout={true}
+                                            initial={{opacity: 0}}
+                                            animate={{opacity: 1}}
+                                            exit={{opacity: 0}}
+                                            key={p.id}>
 
-                    {filteredProjects.map((p, index) => {
-                        return <Project key={index} title={p.title} src={p.src} text={p.text} hrefProj={p.hrefProj}
-                                        hrefGit={p.hrefGit}/>
-                    })}
-
+                                    <Project key={p.id} title={p.title} src={p.src} text={p.text} hrefProj={p.hrefProj}
+                                             hrefGit={p.hrefGit}/>
+                                </motion.div>
+                            )
+                        })}
+                    </AnimatePresence>
                 </FlexWrapper>
             </Container>
         </S.Projects>

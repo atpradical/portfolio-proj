@@ -17,25 +17,23 @@ const DesktopMenu = styled.nav`
 const MobileMenu = styled.nav``
 
 const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
-  width: 20px;
-  height: 20px;
+  width: 1px;
+  height: 1px;
   position: fixed;
   padding: 0;
-  top: -10vh;
-  right: 2%;
+  top: 20px;
+  right: 20px;
   z-index: -99999;
+  opacity: 0;
   background-image: ${theme.colors.gradientMenuPopup};
   border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: ${theme.animation.transition5};
-  
+  transition: top .1s ease-in-out, right .1s ease-in-out, padding .5s ease-in-out, opacity .1s ease-in-out 2s;
+
   ul {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
+    display: none;
 
     & ${MenuLink} {
       ${font({lineHeight: 1.2, Fmax: 28, Fmin: 22})}
@@ -53,6 +51,15 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
     right: calc(100% - 99%);
     z-index: 99999;
     padding: 25vh 49%;
+    opacity: 1;
+    transition: top .1s ease-in-out, right .1s ease-in-out .5s, padding .5s ease-in-out, opacity .1s ease-in-out .1s;
+
+    ul {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+    }
   `}
 `
 
